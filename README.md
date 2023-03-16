@@ -17,7 +17,7 @@ SO THAT website users with artisitic blocks may find motivation through the arra
 
 
 ## Description
-CreativeJuice will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will be integrated along with the WordAPI to produce colors that realte to the words produced to help artists with any blocks they may have will creating their pieces.
+CreativeJuice will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will be integrated along with the WordAPI to produce colors that realte to the words produced to help artists with any blocks they may have will creating their pieces. This web app is meant to get the creative juices flowing! 
 
 
 ## Project Requirements
