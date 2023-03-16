@@ -1,5 +1,11 @@
 # 07 Project 1: Interactive Front-End Application
 
+Project Description
+Project 1 
+
+We created a creative writing app that will assist the user with a variety of ideas and color palettes that will coincide with there chosen keyword. For example, the user can type in any keyword which will then allow the app to generate a set amount of suggestions and color options to coincide with their keyword. We feel that an app of this capacity could expand the idea base of a user experiencing writers block.
+
+
 ## Your Task
 At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
 
