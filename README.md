@@ -15,16 +15,22 @@ Projects won’t provide you with a user story or acceptance criteria, because y
 
 Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
 
+## Description
+CreativeJuices will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will generate . This web app is meant to get the creative juices flowing! 
 
 ## User Story 
-AS A coding bootcamp student 
-I WANT to create a website which helps people with their artistic blocks using the fundementals learned up to this point. For example, HTML, CSS, JavaScript, JQuery, and the utilization of API's.
-SO THAT website users with artisitic blocks may find motivation through the array of words and colors that are made available
+AS A artist or wrtier with creative block
+I want a site that will generate words and colors
+SO that I can feel inspired to create something new
 
-
-## Description
-CreativeJuice will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will be integrated along with the WordAPI to produce colors that realte to the words produced to help artists with any blocks they may have will creating their pieces. This web app is meant to get the creative juices flowing! 
-
+## Acceptance Criteria
+GIVEN we have a dashboard and it has a get started button
+WHEN you click the get started button
+THEN you will have a modal to input a selection for color and word choices
+WHEN the user confirms their choices
+THEN the results are displayed in cards alternating between the words and colors
+WHEN the user is finished with this list
+THEN they can click try again (Buttons displayed at the top)
 
 ## Project Requirements
 You and your group will use everything you’ve learned over the past six modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
