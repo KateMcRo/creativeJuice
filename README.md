@@ -13,9 +13,9 @@ Finally, a project requires a presentation, because you’re trying to convince 
 CreativeJuices will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will generate . This web app is meant to get the creative juices flowing! 
 
 ## User Story 
-AS A coding bootcamp student 
-I WANT to create a website which helps people with their artistic blocks using the fundementals learned up to this point. For example, HTML, CSS, JavaScript, JQuery, and the utilization of API's.
-SO THAT website users with artisitic blocks may find motivation through the array of words and colors that are made available through the two API's. 
+AS A artist or wrtier with creative block
+I want a site that will generate words and colors
+SO that I can feel inspired to create something new
 
 ## Acceptance Criteria
 GIVEN we have a dashboard and it has a get started button
