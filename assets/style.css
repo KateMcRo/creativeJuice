@@ -23,6 +23,7 @@ html {
 
 header {
     width: 100%;
+    text-align: center;
 }
 
 /* we likely own't even need this */
