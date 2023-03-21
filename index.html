@@ -8,10 +8,69 @@
     <title>Creative Juice</title>
 </head>
 <body>
-    
+    <header>
+    <h1> Creative Juice</h1>
+    </header>
+    <div id="landingContainer">
+        <div class="pictureContainer" width="400px">
+            <img src="./assets/images/CJ_color_wheel.png" width="400px" height="400px"/>
+        </div>
 
-    <script src="./assets/script.js"></script>
+        <div class="quoteContainer">
+            <p class="mb-4 none d-md-block"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
+            <h2> When you have creative <b>block</b> or design paralysis, all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></h2>
+        </div>
+
+        <button id="startBtn">Get Started</button>
+    </div>
+
+    <div class="tile is-ancestor">
+     <div class="tile is-vertical is-8">
+    <div class="tile">
+    <div class="tile is-parent is-vertical">
+    <article class="tile is-child notification is-primary">
+     <input id = "wordText" class="input is-small" type="text" placeholder="Word Input">
+        <button id="wordSubmit">Retry Word</button></p>
+        <button id="colorSubmit">Retry Color</button></p>
+        <button id="startOver">Start Over</button></p>
+         </article>
+          <article class="tile is-child notification is-warning">
+            <p class="title">Second box</p>
+            <p class="subtitle">Middle tile</p>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-info">
+            <p class="title">Middle tile</p>
+            <p class="subtitle">With an image</p>
+            <figure class="image is-4by3">
+              <img src="https://bulma.io/images/placeholders/640x480.png">
+            </figure>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title">Wide tile</p>
+          <p class="subtitle">Aligned with the right tile</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child notification is-success">
+        <div class="content">
+          <p class="title">Tall tile</p>
+          <p class="subtitle">With even more content</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+    <script src= "./assets/script.js"></script> 
 </body>
-
 </html>
-
