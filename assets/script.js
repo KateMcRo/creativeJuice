@@ -6,12 +6,43 @@ const startOverBtnEl = document.getElementById("startOver");
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
+const colorPickerContainerEl = document.getElementById("pickerTest")
+const colorPickerArray = [
+    "#000000",
+    "#A6a6a6",
+    "#Ffffff",
+    "#F6F1EA",
+    "#C6B2A2",
+    "#62351B",
+    "#Ff3131",
+    "#Ff5757",
+    "#Ff66c4",
+    "#Cb6ce6",
+    "#8c52ff",
+    "#5e17eb",
+    "#0097b2",
+    "#0cc0df",
+    "#5ce1e6",
+    "#38b6ff",
+    "#5271ff",
+    "#004aad",
+    "#00bf63",
+    "#7ed957",
+    "#C1ff72",
+    "#Ffde59",
+    "#Ffbd59",
+    "#Ff914d",
+]
+
+console.log(colorPickerArray)
+
 // Input Elements
 let wordInputEl = document.getElementById("wordText"); 
 let colorInputEl = document.getElementById("colorInput");
 
 const hexContainerEl = document.getElementById("hexTest");
 let colorObjectArray = []
+
 
 
 // Color Variable for parameter
@@ -70,6 +101,26 @@ function generateCard(hexCode){
     colorContainer.appendChild(hexText)
     
     return colorContainer
+}
+
+// Color Picker for loop
+function handleColorPicker (){
+    // returns parsed version of what was in local storage
+    //colorObject = handleColorObject()
+
+    //for (let i = 0; i < colorObject.colorList.length; i++) {
+    //const hex = colorObject.colorList[i]
+    //const hexCard = generateCard(hex)
+    //console.log(hexCard)
+    //hexContainerEl.append(hexCard)
+    //}
+}
+
+// Color Picker Test
+function generateColorPicker(hexCode) {
+    const pickerContainer = document.createElement("div")
+    pickerContainer.style.background = hexCode
+    pickerContainer.style.width = "5rem"
 }
 
 // Click Functions
