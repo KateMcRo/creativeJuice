@@ -11,23 +11,26 @@
     <link rel="icon" href="./assets/images/grapefruit.png">
     </title>
 </head>
-<header id=landingPage>
+<header>
   <h1> Creative Juice</h1>
 </header>
-  <p><b>"It's hard to start from nothing"</b> - David Byrne (Talking Heads)</p>
-  <h2> When you have creative <b>block</b> or design paralysis, all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b> -Kate Rogers</h2>
+  <div id="landingContainer">
+  <div class="pictureContainer" width="400px">
+  <img src="./assets/images/CJ_color_wheel.png" width="400px" height="400px"/></div>
+  <div class="quoteContainer">
+  <p class="mb-4 none d-md-block"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</h1> 
+  <h2> When you have creative <b>block</b> or design paralysis, all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></h2>
   <button id="startBtn">Get Started</button>
+</div>
 <body>
     <div class="tile is-ancestor">
      <div class="tile is-vertical is-8">
     <div class="tile">
     <div class="tile is-parent is-vertical">
     <article class="tile is-child notification is-primary">
-     <input id ="wordText" class="input is-small" type="text" placeholder="Small input">
-        <button id="wordSubmit">Submit Word</button></p>
-        <input  class="input is-small" type="text" placeholder="Small input">
-        <button id="colorSubmit">Submit Color</button></p>
-        <input class="input is-small" type="text" placeholder="Small input">
+     <input id = "wordText" class="input is-small" type="text" placeholder="Word Input">
+        <button id="wordSubmit">Retry Word</button></p>
+        <button id="colorSubmit">Retry Color</button></p>
         <button id="startOver">Start Over</button></p>
          </article>
           <article class="tile is-child notification is-warning">
