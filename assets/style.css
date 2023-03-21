@@ -1,0 +1,49 @@
+/* CSS styling elements go here */
+:root {
+    --soft-white: #fcfdf4;
+    /* no seriously, daylight has a known color, this should be close */
+    --daylight: #f4f9ff;
+    --lavender: #e4e0fd;
+    --lime: #5af7a2;
+    --coral: #fbbdbd;
+    --straw: #f8ecd3;
+    --orange-smoothie: #ffccae;
+    --slate-blue: #a9b3cc;
+    --deep-scarlet: #e80040;
+}
+
+html {
+    background-color: var(--daylight);
+    color: black;
+    /* these settings may change depending on how things look */
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+/* we likely own't even need this */
+header h1 {
+    color: black;
+    font-size: 4rem;
+}
+
+#navbar {
+    background-color: var(--lavender);
+    color: black;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+#startBtn {
+    color: black;
+    background-color: var(--lime);
+    padding: 4px;
+    /* more people should use border-radius */
+    border-radius: 8px;
+    font-size: 2rem;
+}
