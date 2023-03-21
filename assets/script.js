@@ -1,5 +1,3 @@
-const wordAPI_KEY = '57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23'
-const colorApiKey = '57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23'
 // Button Elements
 const colorSubmitBtnEl = document.getElementById("colorSubmit")
 const startOverBtnEl = document.getElementById("startOver")
@@ -15,7 +13,7 @@ let apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
 let colorInputEl = document.getElementById("colorInput")
 
-// Color API call
+// Color Variable for parameter
 const options = {
 	method: 'POST',
 	headers: {
@@ -27,33 +25,26 @@ const options = {
     // empty array generates totally random palette
 	body: '{"colorList":[]}'
 };
-fetch('https://ai-color-generator.p.rapidapi.com/generate-color', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
-
-
-
-
-
-	
-
-
-
-
+// Color API call
+async function getColorData () {
+    const response = await fetch('https://ai-color-generator.p.rapidapi.com/generate-color', options)
+    const data = await response.json()
+    localStorage.setItem("data", JSON.stringify(data))
+}
 
 // Click Functions
 function handleColorSubmit (event) {
     event.preventDefault()
     console.log("color")
 }
-// uses an API call from user input
+
+// Word API call from user input
 function renderSynonyms(){
 	let wordValueEl = document.querySelector('#wordText').value;
 	const synonyms = {
 		method: 'GET',
 		headers: {
-			'X-RapidAPI-Key': wordAPI_KEY ,
+			'X-RapidAPI-Key': apiKey ,
 			'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
 			}
 	};
@@ -69,7 +60,6 @@ function retryWord(){
 	console.log("retry")
 
 };
-
 
 function restartTest () {
     console.log("Start Over")
