@@ -1,6 +1,5 @@
 // Button Elements
 const wordSubmitBtnEl = document.getElementById("wordSubmit");
-const colorSubmitBtnEl = document.getElementById("colorSubmit");
 const startOverBtnEl = document.getElementById("startOver");
 
 // API Keys (key is the same for both APIs)
@@ -46,26 +45,28 @@ let colorObjectArray = []
 
 
 // Color Variable for parameter
-const options = {
-	method: 'POST',
-	headers: {
-		'content-type': 'application/json',
-		'X-RapidAPI-Key': apiKey,
-		'X-RapidAPI-Host': 'ai-color-generator.p.rapidapi.com'
-	},
-    // colorList array takes up to 4 strings of hex codes, ex: "#1e91c1"
-    // empty array generates totally random palette
-	body: '{"colorList":[]}'
-};
+
 // Color API call
-async function getColorData () {
+async function getColorData (hexCode) {
+    console.log(hexCode)
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            'X-RapidAPI-Key': apiKey,
+            'X-RapidAPI-Host': 'ai-color-generator.p.rapidapi.com'
+        },
+        // colorList array takes up to 4 strings of hex codes, ex: "#1e91c1"
+        // empty array generates totally random palette
+        body: `{"colorList":["${hexCode}"]}`
+    };
     const response = await fetch('https://ai-color-generator.p.rapidapi.com/generate-color', options)
     const data = await response.json()
     localStorage.setItem("data", JSON.stringify(data))
+    console.log({response, data, hexCode})
 }
 
-getColorData()
-handlePopulateColor()
+handleColorPicker()
 
 
 // API Data
@@ -79,11 +80,11 @@ function handleColorObject () {
 function handlePopulateColor (){
     // returns parsed version of what was in local storage
     colorObject = handleColorObject()
-
+    hexContainerEl.innerHTML = ""
+    
     for (let i = 0; i < colorObject.colorList.length; i++) {
     const hex = colorObject.colorList[i]
     const hexCard = generateCard(hex)
-    console.log(hexCard)
     hexContainerEl.append(hexCard)
     }
 }
@@ -106,27 +107,31 @@ function generateCard(hexCode){
 // Color Picker for loop
 function handleColorPicker (){
     // returns parsed version of what was in local storage
-    //colorObject = handleColorObject()
-
-    //for (let i = 0; i < colorObject.colorList.length; i++) {
-    //const hex = colorObject.colorList[i]
-    //const hexCard = generateCard(hex)
-    //console.log(hexCard)
-    //hexContainerEl.append(hexCard)
-    //}
+    for (let i = 0; i < colorPickerArray.length; i++) {
+    const hex = colorPickerArray[i]
+    const pickHex = generateColorPicker(hex)
+    pickHex.addEventListener("click", (e)=> handleColorSubmit(e)) //create function to 
+    colorPickerContainerEl.appendChild(pickHex)
+    }
 }
 
 // Color Picker Test
 function generateColorPicker(hexCode) {
     const pickerContainer = document.createElement("div")
+
+    pickerContainer.id = hexCode
+
     pickerContainer.style.background = hexCode
-    pickerContainer.style.width = "5rem"
+    pickerContainer.style.width = "2rem"
+    pickerContainer.style.height = "2rem"
+    return pickerContainer
 }
 
 // Click Functions
-function handleColorSubmit (event) {
-    event.preventDefault()
-    console.log("color")
+async function handleColorSubmit (event) {
+    const hexCode = event.target.id
+    await getColorData(hexCode)
+    handlePopulateColor()
 }
 
 // Word API call from user input
@@ -167,7 +172,6 @@ function showModule(element) {
 }
 
 // Event Listeners
-colorSubmitBtnEl.addEventListener("click", handleColorSubmit)
 startOverBtnEl.addEventListener("click", restartTest)
 wordSubmitBtnEl.addEventListener("click", renderSynonyms)
 
