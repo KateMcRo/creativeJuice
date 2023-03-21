@@ -8,9 +8,11 @@ const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
 // Input Elements
 let wordInputEl = document.getElementById("wordText"); 
-let colorInputEl = document.getElementById("colorInput")
+let colorInputEl = document.getElementById("colorInput");
 
+const hexContainerEl = document.getElementById("hexTest");
 let colorObjectArray = []
+
 
 // Color Variable for parameter
 const options = {
@@ -43,20 +45,31 @@ function handleColorObject () {
 }
 
 // Dom test
-function handlePopulateColor (colorList){
+function handlePopulateColor (){
+    // returns parsed version of what was in local storage
     colorObject = handleColorObject()
-    console.log(colorObject)
-    for (let i = 1; i < colorObjectArray.length; i++) {
-    const hex = handlePopulateColor(colorList[i])
-    const currentHex = generateCard(hex)
-    colorObjectArray.push(currentHex)
-        console.log(colorObjectArray)
+
+    for (let i = 0; i < colorObject.colorList.length; i++) {
+    const hex = colorObject.colorList[i]
+    const hexCard = generateCard(hex)
+    console.log(hexCard)
+    hexContainerEl.append(hexCard)
     }
 }
 
 // Card Test
-function generateCard(colorList){
+function generateCard(hexCode){
+    const colorContainer = document.createElement("div")
+    const hexText = document.createElement("p")
+
+    hexText.className = "hexFont"
+    hexText.innerText = hexCode
+
+    colorContainer.style.background = hexCode
+    colorContainer.style.width = "10rem"
+    colorContainer.appendChild(hexText)
     
+    return colorContainer
 }
 
 // Click Functions
