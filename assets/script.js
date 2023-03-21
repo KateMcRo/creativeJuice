@@ -33,8 +33,6 @@ const colorPickerArray = [
     "#Ff914d",
 ]
 
-console.log(colorPickerArray)
-
 // Input Elements
 let wordInputEl = document.getElementById("wordText"); 
 let colorInputEl = document.getElementById("colorInput");
@@ -42,13 +40,9 @@ let colorInputEl = document.getElementById("colorInput");
 const hexContainerEl = document.getElementById("hexTest");
 let colorObjectArray = []
 
-
-
-// Color Variable for parameter
-
 // Color API call
 async function getColorData (hexCode) {
-    console.log(hexCode)
+    // Color Variable for parameter
     const options = {
         method: 'POST',
         headers: {
@@ -57,17 +51,12 @@ async function getColorData (hexCode) {
             'X-RapidAPI-Host': 'ai-color-generator.p.rapidapi.com'
         },
         // colorList array takes up to 4 strings of hex codes, ex: "#1e91c1"
-        // empty array generates totally random palette
         body: `{"colorList":["${hexCode}"]}`
     };
     const response = await fetch('https://ai-color-generator.p.rapidapi.com/generate-color', options)
     const data = await response.json()
     localStorage.setItem("data", JSON.stringify(data))
-    console.log({response, data, hexCode})
 }
-
-handleColorPicker()
-
 
 // API Data
 function handleColorObject () {
@@ -81,7 +70,7 @@ function handlePopulateColor (){
     // returns parsed version of what was in local storage
     colorObject = handleColorObject()
     hexContainerEl.innerHTML = ""
-    
+
     for (let i = 0; i < colorObject.colorList.length; i++) {
     const hex = colorObject.colorList[i]
     const hexCard = generateCard(hex)
@@ -110,7 +99,7 @@ function handleColorPicker (){
     for (let i = 0; i < colorPickerArray.length; i++) {
     const hex = colorPickerArray[i]
     const pickHex = generateColorPicker(hex)
-    pickHex.addEventListener("click", (e)=> handleColorSubmit(e)) //create function to 
+    pickHex.addEventListener("click", (e)=> handleColorSubmit(e))
     colorPickerContainerEl.appendChild(pickHex)
     }
 }
@@ -175,3 +164,4 @@ function showModule(element) {
 startOverBtnEl.addEventListener("click", restartTest)
 wordSubmitBtnEl.addEventListener("click", renderSynonyms)
 
+handleColorPicker()
