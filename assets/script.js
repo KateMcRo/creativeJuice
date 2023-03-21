@@ -109,6 +109,7 @@ function generateColorPicker(hexCode) {
     const pickerContainer = document.createElement("div")
 
     pickerContainer.id = hexCode
+    pickerContainer.className = "pickBox"
 
     pickerContainer.style.background = hexCode
     pickerContainer.style.width = "2rem"
