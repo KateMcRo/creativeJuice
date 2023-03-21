@@ -1,5 +1,116 @@
 /* CSS styling elements go here */
-html {
-/* Day 1 placeholder */
-    background-color: white;
+:root {
+    --soft-white: #fcfdf4;
+    /* no seriously, daylight has a known color, this should be close */
+    --daylight: #f4f9ff;
+    --lavender: #e4e0fd;
+    --lime: #5af7a2;
+    --coral: #fbbdbd;
+    --straw: #f8ecd3;
+    --orange-smoothie: #ffccae;
+    --slate-blue: #a9b3cc;
+    --deep-scarlet: #e80040;
+    --primary-green: #00d1b2;
 }
+
+html {
+    background-color: var(--daylight);
+    color: black;
+    /* these settings may change depending on how things look */
+    width: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+body {
+    margin: 0.75rem;
+}
+
+header {
+    background-color: var(--daylight);
+    /* background: linear-gradient(rgb(195, 195, 221),rgb(198, 190, 163)); */
+    /* background: linear-gradient(rgb(252, 117, 117),rgb(163, 137, 215)); */
+    width: 100%;
+    text-align: center;
+}
+
+/* we likely own't even need this */
+header h1 {
+    color: black;
+    font-size: 4rem;
+}
+
+#navbar {
+    background-color: var(--lavender);
+    color: black;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+#startBtn {
+    color: white;
+    background-color: var(--primary-green);
+    padding: 4px 8px 4px 8px;
+    /* more people should use border-radius */
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin: 8px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#wordSubmit {
+    color: black;
+    background-color: var(--primary-green);
+    background-color: rgb(247, 236, 198);
+    margin: 6px 0 12px 0;
+    padding: 4px;
+    border-radius: 6px;
+
+}
+
+.pictureContainer {
+    margin: 0.75rem;
+}
+
+
+#colorSubmit {
+    color: black;
+    background-color: rgb(196, 156, 221);
+    margin: 6px 0 12px 0;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+#startOver {
+    color: black;
+    background-color: rgb(222, 47, 91);
+    margin: 6px 0 12px 0;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+#landingContainer {
+    background-color: white;
+    border-color: lightgrey;
+    border-radius: 4px;
+    border: none;
+    margin: 0.75rem;
+}
+
+.quoteContainer {
+    background:rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border-color: lightgrey;
+    margin: 0.75rem;
+}
+
+#wordText {
+    font-size: 1rem;
+    border-radius: 5px;
+    background-image: none;
+    margin-bottom: 4px;
+}
+
