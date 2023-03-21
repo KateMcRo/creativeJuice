@@ -23,10 +23,13 @@ html {
 }
 
 body {
-    background-color: var(--daylight);
+    margin: 0.75rem;
 }
 
 header {
+    background-color: var(--daylight);
+    /* background: linear-gradient(rgb(195, 195, 221),rgb(198, 190, 163)); */
+    /* background: linear-gradient(rgb(252, 117, 117),rgb(163, 137, 215)); */
     width: 100%;
     text-align: center;
 }
@@ -68,7 +71,7 @@ header h1 {
 
 }
 
-.pictureContainter {
+.pictureContainer {
     margin: 0.75rem;
 }
 
@@ -93,7 +96,8 @@ header h1 {
     background-color: white;
     border-color: lightgrey;
     border-radius: 4px;
-    border: solid;
+    border: none;
+    margin: 0.75rem;
 }
 
 .quoteContainer {
@@ -104,6 +108,9 @@ header h1 {
 }
 
 #wordText {
+    font-size: 1rem;
+    border-radius: 5px;
     background-image: none;
+    margin-bottom: 4px;
 }
 
