@@ -10,6 +10,7 @@
     --orange-smoothie: #ffccae;
     --slate-blue: #a9b3cc;
     --deep-scarlet: #e80040;
+    --primary-green: #00d1b2;
 }
 
 html {
@@ -40,10 +41,31 @@ header h1 {
 }
 
 #startBtn {
-    color: black;
-    background-color: var(--lime);
+    color: white;
+    background-color: var(--primary-green);
     padding: 4px;
     /* more people should use border-radius */
     border-radius: 8px;
     font-size: 2rem;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#colorSubmit {
+    color: white;
+    background-color: var(--primary-green);
+    margin: 6px 0 12px 0;
+}
+
+#wordSubmit {
+    color: white;
+    background-color: var(--primary-green);
+}
+
+#startOver {
+    color: black;
+    background-color: beige;
+    margin: 6px 0 12px 0;
 }
