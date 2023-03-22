@@ -40,12 +40,18 @@ const colorPickerArray = [
     "#Ff914d",
 ]
 
+// Color Elements
+const colorTilesAll = document.getElementsByClassName("colorTile")
+const colorTile0 = document.getElementById("color0");
+const colorTile1 = document.getElementById("color1");
+const colorTile2 = document.getElementById("color2");
+const colorTile3 = document.getElementById("color3");
+const colorTile4 = document.getElementById("color4");
+
+let colorObjectArray = []
+
 // Input Elements
 let wordInputEl = document.getElementById("wordText"); 
-
-// Color Results test
-const hexContainerEl = document.getElementById("hexTest");
-let colorObjectArray = []
 
 // Color API call
 async function getColorData (hexCode) {
@@ -72,32 +78,32 @@ function handleColorObject () {
     return colorObject
 }
 
-// Dom test
-function handlePopulateColor (){
+// Tile Dom Test
+function handlePopulateTiles () {
     // returns parsed version of what was in local storage
     colorObject = handleColorObject()
-    hexContainerEl.innerHTML = ""
-
-    for (let i = 0; i < colorObject.colorList.length; i++) {
-    const hex = colorObject.colorList[i]
-    const hexCard = generateCard(hex)
-    hexContainerEl.append(hexCard)
-    }
-}
-
-// Card Test
-function generateCard(hexCode){
-    const colorContainer = document.createElement("div")
-    const hexText = document.createElement("p")
-
-    hexText.className = "hexFont"
-    hexText.innerText = hexCode
-
-    colorContainer.style.background = hexCode
-    colorContainer.style.width = "10rem"
-    colorContainer.appendChild(hexText)
+    colorTilesAll.innerHTML = ""
     
-    return colorContainer
+    const hex0 = colorObject.colorList[0]
+    colorTile0.style.background = hex0
+    colorTile0.innerText = hex0
+    console.log({colorTile0})
+
+    const hex1 = colorObject.colorList[1]
+    colorTile1.style.background = hex1
+    colorTile1.innerText = hex1
+
+    const hex2 = colorObject.colorList[2]
+    colorTile2.style.background = hex2
+    colorTile2.innerText = hex2
+
+    const hex3 = colorObject.colorList[3]
+    colorTile3.style.background = hex3
+    colorTile3.innerText = hex3
+
+    const hex4 = colorObject.colorList[4]
+    colorTile4.style.background = hex4
+    colorTile4.innerText = hex4
 }
 
 // Adds event listeners to each color square
@@ -128,8 +134,7 @@ function generateColorPicker(hexCode) {
 async function handleColorSubmit (event) {
     const hexCode = event.target.id
     await getColorData(hexCode)
-    // function to set staggered cards goes here
-    handlePopulateColor()
+    handlePopulateTiles()
 }
 
 // Word API call from user input
@@ -211,3 +216,4 @@ startOverBtnEl.addEventListener("click", restartTest)
 wordSubmitBtnEl.addEventListener("click", renderSynonyms)
 
 handleColorPicker()
+
