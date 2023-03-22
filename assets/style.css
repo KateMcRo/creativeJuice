@@ -23,13 +23,10 @@ html {
 }
 
 body {
-    margin: 0.75rem;
+    background-color: var(--daylight);
 }
 
 header {
-    background-color: var(--daylight);
-    /* background: linear-gradient(rgb(195, 195, 221),rgb(198, 190, 163)); */
-    /* background: linear-gradient(rgb(252, 117, 117),rgb(163, 137, 215)); */
     width: 100%;
     text-align: center;
 }
@@ -63,12 +60,14 @@ header h1 {
 
 #wordSubmit {
     color: black;
+    font-size: 1.2rem;
     background-color: var(--primary-green);
     background-color: rgb(247, 236, 198);
     margin: 6px 0 12px 0;
     padding: 4px;
     border-radius: 6px;
-
+    text-align: center;
+    min-width: 7rem;
 }
 
 .pictureContainer {
@@ -77,27 +76,32 @@ header h1 {
 
 
 #colorSubmit {
+    text-align: center;
+    font-size: 1.2rem;
     color: black;
     background-color: rgb(196, 156, 221);
     margin: 6px 0 12px 0;
     padding: 4px;
     border-radius: 6px;
+    min-width: 7rem;
 }
 
 #startOver {
+    text-align: center;
+    font-size: 1.2rem;
     color: black;
-    background-color: rgb(222, 47, 91);
+    background-color: rgb(245, 104, 116);
     margin: 6px 0 12px 0;
     padding: 4px;
     border-radius: 6px;
+    min-width: 7rem;
 }
 
 #landingContainer {
     background-color: white;
     border-color: lightgrey;
     border-radius: 4px;
-    border: none;
-    margin: 0.75rem;
+    border: solid;
 }
 
 .quoteContainer {
@@ -108,9 +112,8 @@ header h1 {
 }
 
 #wordText {
-    font-size: 1rem;
-    border-radius: 5px;
     background-image: none;
-    margin-bottom: 4px;
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.6rem;
 }
-
