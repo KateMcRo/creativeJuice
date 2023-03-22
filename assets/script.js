@@ -1,6 +1,10 @@
 // Button Elements
 const wordSubmitBtnEl = document.getElementById("wordSubmit");
 const startOverBtnEl = document.getElementById("startOver");
+const wordCard1 = document.getElementById("word1");
+const wordCard2 = document.getElementById("word2");
+const wordCard3 = document.getElementById("word3");
+const wordCard4 = document.getElementById("word4");
 let synonymArray = [];
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
@@ -143,16 +147,35 @@ function renderSynonyms(){
 	.then(function(data){
 		console.log(data);
 		console.log(data.synonyms)
-	// displayWord = document.querySelector('.subtile')
+	
 	//displayWord.innerText = wordValueEl;
+    let searchedWord = document.getElementById('searchedWord');
+    searchedWord.innerText = wordValueEl;
 	
 		
 	for(let i = 0; i < data.synonyms.length; i++){
-		
+		if (data.synonyms.length <= 0 ){
+            // display modal
+
+        }
 		console.log(data.synonyms[i])
 		synonymArray.push(data.synonyms[i]);
 	}
 	console.log(synonymArray)
+    for (let i = 0; i < 4; i++){
+        let fourSynonyms = [];
+        fourSynonyms.push(synonymArray[i]);
+        console.log(fourSynonyms);
+
+    }
+    // for(let i =0; fourSynonyms.length; i++){
+    //     if(fourSynonyms[i] != undefined){
+    //         wordCard1.innerText = fourSynonyms[i];
+    //         wordCard2.innerText = fourSynonyms[i];
+    //         wordCard3.innerText = fourSynonyms[i];
+    //         wordCard4.innerText = fourSynonyms[i];
+    //     }
+    // }
 	
 	})
 }
