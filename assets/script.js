@@ -1,11 +1,14 @@
 // Button Elements
 const wordSubmitBtnEl = document.getElementById("wordSubmit");
 const startOverBtnEl = document.getElementById("startOver");
+
+// Word Elements
 const wordCard1 = document.getElementById("word1");
 const wordCard2 = document.getElementById("word2");
 const wordCard3 = document.getElementById("word3");
 const wordCard4 = document.getElementById("word4");
 let synonymArray = [];
+
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
@@ -39,8 +42,8 @@ const colorPickerArray = [
 
 // Input Elements
 let wordInputEl = document.getElementById("wordText"); 
-let colorInputEl = document.getElementById("colorInput");
 
+// Color Results test
 const hexContainerEl = document.getElementById("hexTest");
 let colorObjectArray = []
 
@@ -97,7 +100,7 @@ function generateCard(hexCode){
     return colorContainer
 }
 
-// Color Picker for loop
+// Adds event listeners to each color square
 function handleColorPicker (){
     // returns parsed version of what was in local storage
     for (let i = 0; i < colorPickerArray.length; i++) {
@@ -108,7 +111,7 @@ function handleColorPicker (){
     }
 }
 
-// Color Picker Test
+// Creates Color Picker Squares in container
 function generateColorPicker(hexCode) {
     const pickerContainer = document.createElement("div")
 
@@ -125,6 +128,7 @@ function generateColorPicker(hexCode) {
 async function handleColorSubmit (event) {
     const hexCode = event.target.id
     await getColorData(hexCode)
+    // function to set staggered cards goes here
     handlePopulateColor()
 }
 
