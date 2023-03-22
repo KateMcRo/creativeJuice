@@ -1,7 +1,7 @@
 // Button Elements
 const wordSubmitBtnEl = document.getElementById("wordSubmit");
 const startOverBtnEl = document.getElementById("startOver");
-
+let synonymArray = [];
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
@@ -127,22 +127,40 @@ async function handleColorSubmit (event) {
 // Word API call from user input
 function renderSynonyms(){
 	let wordValueEl = document.querySelector('#wordText').value;
-	const synonyms = {
+	
+	const getSynonyms = {
 		method: 'GET',
 		headers: {
 			'X-RapidAPI-Key': apiKey ,
 			'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
 			}
 	};
-		
-	fetch(`https://wordsapiv1.p.rapidapi.com/words/${wordValueEl}/synonyms`, synonyms)
-		.then(response => response.json())
-		.then(response => console.log(response))
-		.catch(err => console.error(err));
+
+	fetch(`https://wordsapiv1.p.rapidapi.com/words/${wordValueEl}/synonyms`, getSynonyms)
+	.then(function(response){
+		return response.json();
+	})
+	.then(function(data){
+		console.log(data);
+		console.log(data.synonyms)
+	// displayWord = document.querySelector('.subtile')
+	//displayWord.innerText = wordValueEl;
 	
+		
+	for(let i = 0; i < data.synonyms.length; i++){
+		
+		console.log(data.synonyms[i])
+		synonymArray.push(data.synonyms[i]);
+	}
+	console.log(synonymArray)
+	
+	})
 }
+	
+
 
 function retryWord(){
+
 	console.log("retry")
 
 };
