@@ -43,8 +43,38 @@ header h1 {
     font-size: 1.8rem;
     width: 100%;
 }
+ 
+
+#landingContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border-color: lightgrey;
+    border-radius: 4px;
+    border: solid;
+    margin: 0.75rem;
+}
+
+.pictureContainer {
+    margin: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.quoteContainer {
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background:rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border-color: lightgrey;
+    margin: 0.75rem;
+    max-width: 40%;
+}
 
 #startBtn {
+    flex-wrap: wrap;
     color: white;
     background-color: var(--primary-green);
     padding: 4px 8px 4px 8px;
@@ -70,10 +100,6 @@ header h1 {
     min-width: 7rem;
 }
 
-.pictureContainer {
-    margin: 0.75rem;
-}
-
 
 #colorSubmit {
     text-align: center;
@@ -95,20 +121,6 @@ header h1 {
     padding: 4px;
     border-radius: 6px;
     min-width: 7rem;
-}
-
-#landingContainer {
-    background-color: white;
-    border-color: lightgrey;
-    border-radius: 4px;
-    border: solid;
-}
-
-.quoteContainer {
-    background:rgb(255, 255, 255);
-    font-size: 1.2rem;
-    border-color: lightgrey;
-    margin: 0.75rem;
 }
 
 #wordText {
