@@ -46,9 +46,6 @@ header h1 {
 
 
 #landingContainer {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     background-color: white;
     border-color: lightgrey;
@@ -63,7 +60,9 @@ header h1 {
 }
 
 .quoteContainer {
+    align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
     background:rgb(255, 255, 255);
     font-size: 1.2rem;
     border-color: lightgrey;
