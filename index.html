@@ -18,7 +18,7 @@
             <img src="./assets/images/CJ_color_wheel.png" width="400px" height="400px"/>
         </div>
 
-        <div class="quoteContainer">
+        <div id="quoteContainer">
             <p class="mb-4 none d-md-block"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
             <p> When you have creative <b>block</b> or design paralysis, <br> all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></p>
             <button id="startBtn">Get Started</button>
@@ -40,14 +40,13 @@
       <div class="tile is-parent is-vertical">
         <article class="tile is-child notification is-primary">
         <input id = "wordText" class="input is-small" type="text" placeholder="Word Input">
-        <button id="wordSubmit">Retry Word</button></p>
-        <button id="colorSubmit">Retry Color</button></p>
-        <button id="startOver">Start Over</button></p>
+        <button id="wordSubmit">Retry Word</button>
+        <button id="colorSubmit">Retry Color</button>
+        <button id="startOver">Start Over</button>
         </article>
 <!-- Second box  -->
         <article class="tile is-child notification is-warning">
-          <p class="title" id="searchedWord">Second box </p></article> </div>
-  </div>
+          <p class="title" id="searchedWord">Second box </p></article> </div></div>
 <!-- Third box in column 1 -->
         <div class="tile is-parent is-vertical">
           <article class="tile is-child notification is-info">
@@ -55,43 +54,44 @@
         </div></div>
       
       <div class="column2">
-      <article class="tile is-child notification is-warning">
-        <p class="title" id="word1">Word 1</p>
-      </article>
-      <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-info">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-spouse notification is-info">
+          <p class="title" id="color1">Word 1</p></article>
+      <div class="tile is-spouse is-vertical">
+        <article class="tile is-spouse notification is-info">
         <p class="title" id="color1">Color 1</p></article>
-      </div></div>
+      </div></div></div>
 
       <div class="column3">
-        <article class="tile is-child notification is-warning">
-          <p class="title" id="word2">Word 2</p>
-        </article>
         <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification is-info">
+          <article class="tile is-spouse notification is-info">
           <p class="title" id="color2">Color 2</p></article>
-        </div></div>
+        <div class="tile is-spouse is-vertical">
+          <article class="tile is-spouse notification is-info">
+          <p class="title" id="color2">Color 2</p></article>
+        </div></div></div>
        
         <div class="column4">
-          <article class="tile is-child notification is-warning">
-            <p class="title" id="word3">Word 3</p>
-          </article>
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-info">
+            <article class="tile is-spouse notification is-info">
+            <p class="title" id="word3">Word 3</p></article>
+          <div class="tile is-spouse is-vertical">
+            <article class="tile is-spouse notification is-info">
             <p class="title" id="color3">Color 3</p></article>
-          </div></div>
+          </div></div></div>
          
           <div class="column5">
-            <article class="tile is-child notification is-warning">
-              <p class="title" id="word4">Word 4</p>
-            </article>
             <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-info">
+              <article class="tile is-spouse notification is-info">
+              <p class="title" id="word">Word 4</p></article>
+            <div class="tile is-spouse is-vertical">
+              <article class="tile is-spouse notification is-info">
               <p class="title" id="color4">Color 4</p></article>
-            </div></div>
-    </div>
+            </div></div></div>
+          
+       </div>
+      </div>
   </div>
-</div>
     <script src= "./assets/script.js"></script> 
 </body>
 </html>
