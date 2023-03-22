@@ -44,7 +44,35 @@ header h1 {
     width: 100%;
 }
 
+
+#landingContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    border-color: lightgrey;
+    border-radius: 4px;
+    border: solid;
+    margin: 0.75rem;
+}
+
+.pictureContainer {
+    margin: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.quoteContainer {
+    flex-wrap: wrap;
+    background:rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border-color: lightgrey;
+    margin: 0.75rem;
+    max-width: 40%;
+}
+
 #startBtn {
+    flex-wrap: wrap;
     color: white;
     background-color: var(--primary-green);
     padding: 4px 8px 4px 8px;
@@ -70,10 +98,6 @@ header h1 {
     min-width: 7rem;
 }
 
-.pictureContainer {
-    margin: 0.75rem;
-}
-
 
 #colorSubmit {
     text-align: center;
@@ -95,20 +119,6 @@ header h1 {
     padding: 4px;
     border-radius: 6px;
     min-width: 7rem;
-}
-
-#landingContainer {
-    background-color: white;
-    border-color: lightgrey;
-    border-radius: 4px;
-    border: solid;
-}
-
-.quoteContainer {
-    background:rgb(255, 255, 255);
-    font-size: 1.2rem;
-    border-color: lightgrey;
-    margin: 0.75rem;
 }
 
 #wordText {
