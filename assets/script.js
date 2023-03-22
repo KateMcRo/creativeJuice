@@ -12,7 +12,7 @@ let synonymArray = [];
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
-const colorPickerContainerEl = document.getElementById("pickerTest")
+const colorPickerContainerEl = document.getElementById("pickerDiv")
 const colorPickerArray = [
     "#000000",
     "#A6a6a6",
@@ -78,7 +78,7 @@ function handleColorObject () {
     return colorObject
 }
 
-// Tile Dom Test
+// Displays color palette results
 function handlePopulateTiles () {
     // returns parsed version of what was in local storage
     colorObject = handleColorObject()
@@ -87,7 +87,6 @@ function handlePopulateTiles () {
     const hex0 = colorObject.colorList[0]
     colorTile0.style.background = hex0
     colorTile0.innerText = hex0
-    console.log({colorTile0})
 
     const hex1 = colorObject.colorList[1]
     colorTile1.style.background = hex1
@@ -108,7 +107,12 @@ function handlePopulateTiles () {
 
 // Adds event listeners to each color square
 function handleColorPicker (){
-    // returns parsed version of what was in local storage
+    colorPickerContainerEl.style.width = "21rem"
+    colorPickerContainerEl.style.height = "16rem"
+    colorPickerContainerEl.style.flexDirection = "row"
+    colorPickerContainerEl.style.alignContent = "space-around"
+    // Above styling can be done in CSS
+
     for (let i = 0; i < colorPickerArray.length; i++) {
     const hex = colorPickerArray[i]
     const pickHex = generateColorPicker(hex)
@@ -123,10 +127,11 @@ function generateColorPicker(hexCode) {
 
     pickerContainer.id = hexCode
     pickerContainer.className = "pickBox"
-
     pickerContainer.style.background = hexCode
     pickerContainer.style.width = "2rem"
     pickerContainer.style.height = "2rem"
+    pickerContainer.style.border = "solid 1px #d9d9d9"
+    pickerContainer.style.margin = ".75rem" // this styling can be done in CSS
     return pickerContainer
 }
 
@@ -215,5 +220,6 @@ function showModule(element) {
 startOverBtnEl.addEventListener("click", restartTest)
 wordSubmitBtnEl.addEventListener("click", renderSynonyms)
 
+// this will need to be moved to the end of the word input
 handleColorPicker()
 
