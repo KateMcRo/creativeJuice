@@ -5,6 +5,7 @@ const wordCard1 = document.getElementById("word1");
 const wordCard2 = document.getElementById("word2");
 const wordCard3 = document.getElementById("word3");
 const wordCard4 = document.getElementById("word4");
+const synonymGenEl = document.getElementById("wordForm")
 let synonymArray = [];
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
@@ -127,7 +128,10 @@ async function handleColorSubmit (event) {
     await getColorData(hexCode)
     handlePopulateColor()
 }
+function handleWordNotFound(){
+    console.log("ERROR");
 
+}
 // Word API call from user input
 function renderSynonyms(){
 	let wordValueEl = document.querySelector('#wordText').value;
@@ -142,40 +146,52 @@ function renderSynonyms(){
 
 	fetch(`https://wordsapiv1.p.rapidapi.com/words/${wordValueEl}/synonyms`, getSynonyms)
 	.then(function(response){
-		return response.json();
+        console.log(response)
+        if(response.status !== 200){
+            handleWordNotFound();
+        } else{
+            return response.json();
+        }
+		
 	})
 	.then(function(data){
+        if(!data || !data.synonyms){
+            return;
+        }
+        if (data.synonyms.length === 0 ){
+            // display modal
+           
+        }
 		console.log(data);
-		console.log(data.synonyms)
+		console.log(data.synonyms);
 	
 	//displayWord.innerText = wordValueEl;
     let searchedWord = document.getElementById('searchedWord');
     searchedWord.innerText = wordValueEl;
 	
-		
+	synonymArray = [];
 	for(let i = 0; i < data.synonyms.length; i++){
-		if (data.synonyms.length <= 0 ){
-            // display modal
-
-        }
-		console.log(data.synonyms[i])
+		
+		//console.log(data.synonyms[i])
 		synonymArray.push(data.synonyms[i]);
 	}
-	console.log(synonymArray)
+	//console.log(synonymArray)
+    let fourSynonyms = [];
     for (let i = 0; i < 4; i++){
-        let fourSynonyms = [];
-        fourSynonyms.push(synonymArray[i]);
-        console.log(fourSynonyms);
+        if(synonymArray[i]){
+            fourSynonyms.push(synonymArray[i]);
+        }
+        
+        //console.log(fourSynonyms);
+    }
+    console.log(fourSynonyms);
+    
+    for(let i =1; i < 5; i++){
+    
+        let element = document.getElementById("word" + i);
+        element.innerText = fourSynonyms[i-1] || "";
 
     }
-    // for(let i =0; fourSynonyms.length; i++){
-    //     if(fourSynonyms[i] != undefined){
-    //         wordCard1.innerText = fourSynonyms[i];
-    //         wordCard2.innerText = fourSynonyms[i];
-    //         wordCard3.innerText = fourSynonyms[i];
-    //         wordCard4.innerText = fourSynonyms[i];
-    //     }
-    // }
 	
 	})
 }
