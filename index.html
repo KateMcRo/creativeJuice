@@ -19,8 +19,8 @@
         </div>
 
         <div id="quoteContainer">
-            <p class="mb-4 none d-md-block"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
-            <p> When you have creative <b>block</b> or design paralysis, <br> all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></p>
+            <p class="mb-4 none d-md-block" id="quote1"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
+            <p id="quote2"> When you have creative <b>block</b> or design paralysis, <br> all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></p>
             <button id="startBtn">Get Started</button>
         </div>
     </div>
@@ -28,6 +28,7 @@
     <div id="wordForm">
         Word Generator
         <input class="input" type="text" placeholder="Input Word">
+        <button id="searchBtn">Search</button>
     </div>
 
     <div>
@@ -39,7 +40,7 @@
   <div class="columns">
     <div class="column1">
     <div class="tile is-ancestor">
-    <div class="tile is-vertical is-4">
+    <div class="tile is-vertical" style="width:350px;">
     <div class="tile" id="retryCard">
     <div class="tile is-parent is-vertical">
     <article class="tile is-child notification is-primary">
@@ -50,48 +51,52 @@
     </article>
 <!-- Second box  -->
         <article class="tile is-child notification is-warning">
-          <p class="title" id="searchedWord">Second box </p></article> </div></div>
+          <p class="title" id="searchedWord">Word Box </p></article> </div></div>
 <!-- Third box in column 1 -->
         <div class="tile is-parent is-vertical">
           <article id="color0" class="tile is-child notification colorTile">
-          <p class="title">Chosen Color</p></article>
+          <p class="title">Color Box</p></article>
         </div></div>
       
       <div class="column2">
-        <div class="tile is-parent is-vertical is-20">
+        <div class="tile is-parent is-vertical" >
+        <div class="tile is-vertical" style="width:250px;">
           <article class="tile is-spouse notification is-info">
           <p class="title" id="word1">Word 1</p></article>
       <div class="tile is-spouse is-vertical">
         <article id="color1" class="tile is-spouse notification is-info colorTile">
         <p class="title" >Color 1</p></article>
-      </div></div></div>
+      </div></div></div></div>
 
       <div class="column3">
         <div class="tile is-parent is-vertical">
+          <div class="tile is-vertical" style="width:250px;">
           <article class="tile is-spouse notification is-info">
           <p class="title" id="word2">Word 2</p></article>
         <div class="tile is-spouse is-vertical">
           <article id="color2" class="tile is-spouse notification is-info colorTile">
           <p class="title">Color 2</p></article>
-        </div></div></div>
+        </div></div></div></div>
        
         <div class="column4">
           <div class="tile is-parent is-vertical">
+            <div class="tile is-vertical" style="width:250px;">
             <article class="tile is-spouse notification is-info">
             <p class="title" id="word3">Word 3</p></article>
           <div class="tile is-spouse is-vertical">
             <article id="color3" class="tile is-spouse notification is-info colorTile">
             <p class="title">Color 3</p></article>
-          </div></div></div>
+          </div></div></div></div>
          
           <div class="column5">
             <div class="tile is-parent is-vertical">
+              <div class="tile is-vertical" style="width:250px;">
               <article class="tile is-spouse notification is-info">
               <p class="title" id="word4">Word 4</p></article>
             <div class="tile is-spouse is-vertical">
               <article id="color4" class="tile is-spouse notification is-info colorTile">
               <p class="title">Color 4</p></article>
-            </div></div></div>
+            </div></div></div></div>
           
        </div>
       </div>
