@@ -1,6 +1,8 @@
 // Button Elements
 const wordSubmitBtnEl = document.getElementById("wordSubmit");
 const startOverBtnEl = document.getElementById("startOver");
+const startBtnEl = document.getElementById("startBtn");
+
 
 // Word Elements
 const wordCard1 = document.getElementById("word1");
@@ -9,6 +11,8 @@ const wordCard3 = document.getElementById("word3");
 const wordCard4 = document.getElementById("word4");
 const synonymGenEl = document.getElementById("wordForm")
 let synonymArray = [];
+
+
 
 // API Keys (key is the same for both APIs)
 const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
@@ -141,11 +145,38 @@ async function handleColorSubmit (event) {
     const hexCode = event.target.id
     await getColorData(hexCode)
     handlePopulateTiles()
-}
-function handleWordNotFound(){
-    console.log("ERROR");
 
 }
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("wordSubmit");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+
+
+
+    // When the user clicks the button, open the modal 
+    // btn.onclick = function() {
+    // modal.style.display = "block";
+    // }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+  
+
+
 // Word API call from user input
 function renderSynonyms(){
 	let wordValueEl = document.querySelector('#wordText').value;
@@ -162,7 +193,7 @@ function renderSynonyms(){
 	.then(function(response){
         console.log(response)
         if(response.status !== 200){
-            handleWordNotFound();
+            modal.style.display = "block";
         } else{
             return response.json();
         }
@@ -173,9 +204,10 @@ function renderSynonyms(){
             return;
         }
         if (data.synonyms.length === 0 ){
+            
             // display modal
            
-        }
+            }
 		console.log(data);
 		console.log(data.synonyms);
 	
@@ -189,13 +221,31 @@ function renderSynonyms(){
 		//console.log(data.synonyms[i])
 		synonymArray.push(data.synonyms[i]);
 	}
-	//console.log(synonymArray)
+    // if(synonymArray < 4){
+    //     fourSynonyms.push(synonymArray)
+    // }
+	console.log(synonymArray)
     let fourSynonyms = [];
     for (let i = 0; i < 4; i++){
-        if(synonymArray[i]){
-            fourSynonyms.push(synonymArray[i]);
+        console.log(i)
+        console.log(synonymArray[i])
+        if(synonymArray[i] !== undefined){
+         
+            var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
+          //  console.log(!fourSynonyms.includes(randomWord))
+            if(!fourSynonyms.includes(randomWord)){
+                console.log(true)  
+              //  console.log(randomWord)
+               // console.log(fourSynonyms);
+                fourSynonyms.push(randomWord);
+                
+            }
         }
         
+        // first call a for loop using math.floor(math.random () * array.length)
+        // use an if statement to check for duplicates  
+        // push elements into new array
+
         //console.log(fourSynonyms);
     }
     console.log(fourSynonyms);
@@ -220,10 +270,12 @@ function retryWord(){
 
 function restartTest () {
     console.log("Start Over")
+    landingContainer.style.display = "flex"
 }
 
 // Show/Hide Functions
 function hideModule(element) {
+
     return element.style.display = "none"
 }
 
@@ -232,10 +284,28 @@ function showModule(element) {
     return element.style.display = "block"
 }
 
+function hideResults(){
+    let colorPick = document.getElementById("colorPick");
+    colorPick.style.display = "none"
+    let resultsPage  = document.querySelector(".columns");
+    resultsPage.style.display = "none"
+    let landingContainer = document.getElementById("landingContainer");
+    landingContainer.style.display = "flex";
+}
+function hideLanding(){
+    let landingContainer = document.getElementById("landingContainer");
+    landingContainer.style.display = "none";
+    let colorPick = document.getElementById("colorPick");
+    colorPick.style.display = "flex"
+    let resultsPage  = document.querySelector(".columns");
+    resultsPage.style.display = "flex"
+}
+hideResults();
 // Event Listeners
 startOverBtnEl.addEventListener("click", restartTest)
 wordSubmitBtnEl.addEventListener("click", renderSynonyms)
-
+startBtnEl.addEventListener("click", hideLanding)
+startOverBtnEl.addEventListener('click', hideResults)
 // this will need to be moved to the end of the word input
 handleColorPicker()
 
