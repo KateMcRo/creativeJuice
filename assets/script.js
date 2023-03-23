@@ -20,29 +20,29 @@ const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 const colorPickerContainerEl = document.getElementById("pickerDiv")
 const colorPickerArray = [
     "#000000",
-    "#A6a6a6",
-    "#Ffffff",
+    "#A6A6A6",
+    "#FFFFFF",
     "#F6F1EA",
     "#C6B2A2",
     "#62351B",
-    "#Ff3131",
-    "#Ff5757",
-    "#Ff66c4",
-    "#Cb6ce6",
-    "#8c52ff",
-    "#5e17eb",
-    "#0097b2",
-    "#0cc0df",
-    "#5ce1e6",
-    "#38b6ff",
-    "#5271ff",
-    "#004aad",
-    "#00bf63",
-    "#7ed957",
-    "#C1ff72",
-    "#Ffde59",
-    "#Ffbd59",
-    "#Ff914d",
+    "#FF3131",
+    "#FF5757",
+    "#FF66C4",
+    "#CB6CE6",
+    "#8C52FF",
+    "#5E17EB",
+    "#0097B2",
+    "#0CC0DF",
+    "#5CE1E6",
+    "#38B6FF",
+    "#5271FF",
+    "#004AAD",
+    "#00BF63",
+    "#7ED957",
+    "#C1FF72",
+    "#FFDE59",
+    "#FFBD59",
+    "#FF914D",
 ]
 
 // Color Elements
@@ -112,10 +112,10 @@ function handlePopulateTiles () {
 
 // Adds event listeners to each color square
 function handleColorPicker (){
-    colorPickerContainerEl.style.width = "21rem"
-    colorPickerContainerEl.style.height = "16rem"
-    colorPickerContainerEl.style.flexDirection = "row"
-    colorPickerContainerEl.style.alignContent = "space-around"
+    //colorPickerContainerEl.style.width = "21rem"
+    //colorPickerContainerEl.style.height = "16rem"
+    //colorPickerContainerEl.style.flexDirection = "row"
+    //colorPickerContainerEl.style.alignContent = "space-around"
     // Above styling can be done in CSS
 
     for (let i = 0; i < colorPickerArray.length; i++) {
@@ -136,7 +136,7 @@ function generateColorPicker(hexCode) {
     pickerContainer.style.width = "2rem"
     pickerContainer.style.height = "2rem"
     pickerContainer.style.border = "solid 1px #d9d9d9"
-    pickerContainer.style.margin = ".75rem" // this styling can be done in CSS
+    // pickerContainer.style.margin = ".75rem" 
     return pickerContainer
 }
 
