@@ -195,7 +195,7 @@ header h1 {
 #inputArea div {
   direction: flex;
   flex: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -217,7 +217,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4.4rem;
+  margin-top: 4.5rem;
 
 }
 
@@ -234,10 +234,10 @@ header h1 {
     background-color: var(--primary-green);
     background-color: rgb(247, 236, 198);
     margin: 6px 4px 12px 0;
-    padding: 6px;
+    padding: 4px;
     border-radius: 6px;
     text-align: center;
-    width: 12rem; 
+    width: 12.5rem; 
 }
 
 
@@ -260,9 +260,9 @@ header h1 {
     color: black;
     background-color: rgb(203, 190, 233);
     margin: 6px 0 12px 0;
-    padding: 6px;
+    padding: 4px;
     border-radius: 6px;
-    width: 12rem;
+    width: 12.5rem;
 }
 
 #wordText {
