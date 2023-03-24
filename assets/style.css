@@ -18,7 +18,7 @@ html {
     background-color: var(--daylight);
     color: black;
     /* these settings may change depending on how things look */
-    width: 100%;
+    /* width: 100%; */
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -29,7 +29,7 @@ html {
 
 body {
     background-color: rgb(241, 250, 253);
-    width: 100%;
+    /* width: 100%; */
 }
 
 header {
@@ -166,7 +166,7 @@ header h1 {
     margin-bottom: 2rem;
 }
 
-#selectedColor {
+.selectedColor {
   border-color: black;
   border: dashed;
   padding: 2px;
