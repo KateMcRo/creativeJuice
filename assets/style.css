@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    background-color: rgb(241, 247, 253);
+    background-color: rgb(241, 250, 253);
 
 }
 
@@ -62,8 +62,8 @@ header h1 {
     flex-direction: row; 
     align-content: space-around;
     margin: 0 0.25rem 1.5rem 0;
-    width: 21rem;
-    height: 16rem;
+    width: 20rem;
+    height: 14rem;
 }
 
 .pickBox {
@@ -75,10 +75,12 @@ header h1 {
 }
 
 #navbar {
-    background-color: var(--lavender);
+    background-color: var(--straw);
     color: black;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     width: 100%;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
 }
  
 
@@ -140,12 +142,20 @@ body p {
     font-weight: 600;
 }
 
+#colorName {
+    margin: 0.75rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+
 #wordSubmit {
     color: black;
     font-size: 1.2rem;
+    font-weight: 500;
     background-color: var(--primary-green);
     background-color: rgb(247, 236, 198);
-    margin: 6px 0 12px 0;
+    margin: 6px 4px 12px 0;
     padding: 4px;
     border-radius: 6px;
     text-align: center;
@@ -167,6 +177,7 @@ body p {
 #startOver {
     text-align: center;
     font-size: 1.2rem;
+    font-weight: 500;
     color: black;
     background-color: rgb(245, 104, 116);
     margin: 6px 0 12px 0;
@@ -228,4 +239,14 @@ body p {
   
   #retryCard {
     max-width: 30%;
+    min-height: fit-content;
+    max-height: 12rem;
+  }
+
+  .column1 {
+    margin-left: 0.75rem;
+  }
+
+  .column5 {
+    margin-right: 0.75rem;
   }
