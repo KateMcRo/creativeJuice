@@ -234,7 +234,7 @@ function renderSynonyms(){
             var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
           //  console.log(!fourSynonyms.includes(randomWord))
             if(!fourSynonyms.includes(randomWord)){
-                console.log(true)  
+               // console.log(true)  
               //  console.log(randomWord)
                // console.log(fourSynonyms);
                 fourSynonyms.push(randomWord);
@@ -248,7 +248,7 @@ function renderSynonyms(){
 
         //console.log(fourSynonyms);
     }
-    console.log(fourSynonyms);
+  //  console.log(fourSynonyms);
     
     for(let i =1; i < 5; i++){
     
@@ -287,25 +287,30 @@ function showModule(element) {
 function hideResults(){
     let colorPick = document.getElementById("colorPick");
     colorPick.style.display = "none"
+    let inputArea = document.getElementById("inputArea");
+    inputArea.style.display = "none";
     let resultsPage  = document.querySelector(".columns");
-    resultsPage.style.display = "none"
+    resultsPage.style.display = "none";
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "flex";
 }
 function hideLanding(){
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "none";
+    let inputArea = document.getElementById("inputArea");
+    inputArea.style.display = "flex";
     let colorPick = document.getElementById("colorPick");
-    colorPick.style.display = "flex"
+    colorPick.style.display = "flex";
     let resultsPage  = document.querySelector(".columns");
-    resultsPage.style.display = "flex"
+    resultsPage.style.display = "flex";
+    
 }
 hideResults();
 // Event Listeners
-startOverBtnEl.addEventListener("click", restartTest)
-wordSubmitBtnEl.addEventListener("click", renderSynonyms)
-startBtnEl.addEventListener("click", hideLanding)
-startOverBtnEl.addEventListener('click', hideResults)
+startOverBtnEl.addEventListener("click", restartTest);
+wordSubmitBtnEl.addEventListener("click", renderSynonyms);
+startBtnEl.addEventListener("click", hideLanding);
+startOverBtnEl.addEventListener('click', hideResults);
 // this will need to be moved to the end of the word input
-handleColorPicker()
+handleColorPicker();
 
