@@ -363,6 +363,10 @@ header h1 {
     border-width: 1px;
   }
 
+  .bulma-fa-mixin {
+    @include fa(1rem, 2rem);
+    background-color: lavender;
+  }
 #color0, #color1, #color2, #color3, #color4 {
   background-color: rgb(224, 224, 224);
   border-radius: 6px;
