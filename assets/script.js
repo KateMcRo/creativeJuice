@@ -234,7 +234,7 @@ function renderSynonyms(){
             var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
           //  console.log(!fourSynonyms.includes(randomWord))
             if(!fourSynonyms.includes(randomWord)){
-                console.log(true)  
+               // console.log(true)  
               //  console.log(randomWord)
                // console.log(fourSynonyms);
                 fourSynonyms.push(randomWord);
@@ -248,7 +248,7 @@ function renderSynonyms(){
 
         //console.log(fourSynonyms);
     }
-    console.log(fourSynonyms);
+  //  console.log(fourSynonyms);
     
     for(let i =1; i < 5; i++){
     
