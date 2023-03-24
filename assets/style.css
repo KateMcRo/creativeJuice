@@ -59,7 +59,11 @@ header h1 {
 #pickerDiv { 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row; 
+    align-content: space-around;
     margin: 0 0.25rem 1.5rem 0;
+    width: 21rem;
+    height: 16rem;
 }
 
 .pickBox {
@@ -107,6 +111,10 @@ header h1 {
     font-size: 1.2rem;
     border-color: lightgrey;
 }
+
+/* #searchBtn {
+
+} */
 
 #startBtn {
     flex-wrap: wrap;
@@ -218,3 +226,6 @@ body p {
     cursor: pointer;
   }
   
+  #retryCard {
+    max-width: 30%;
+  }
