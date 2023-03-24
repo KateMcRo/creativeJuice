@@ -133,8 +133,8 @@ function generateColorPicker(hexCode) {
     pickerContainer.id = hexCode
     pickerContainer.className = "pickBox"
     pickerContainer.style.background = hexCode
-    pickerContainer.style.width = "2rem"
-    pickerContainer.style.height = "2rem"
+    pickerContainer.style.width = "2.5rem"
+    pickerContainer.style.height = "2.5rem"
     pickerContainer.style.border = "solid 1px #d9d9d9"
     // pickerContainer.style.margin = ".75rem" 
     return pickerContainer
