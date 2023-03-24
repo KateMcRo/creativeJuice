@@ -25,53 +25,49 @@
         </div>
     </div>
 
-    <div id="wordForm">
-        Word Generator
-        <input class="input" type="text" placeholder="Input Word">
-        <button id="searchBtn">Search</button>
+    <div id = "inputArea">
+      <div id = "colorPick">
+        <p>Select a Color</p>
+        <div id="pickerDiv">  
+        </div></div>
+
+        <div class="tile" id="retryCard">
+          <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification is-primary">
+            <input id="wordText" class="input is-small" type="text" placeholder="Word Input">
+            <button id="wordSubmit">Submit</button>
+            <button id="startOver">Home</button>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Please enter a real word </p>
+              </div>
+              </div>
+          </article>
+    </div>
     </div>
 
-    <div id = "colorPick">
-        <p>Color Picker</p>
-        <div id="pickerDiv">  
-        </div>
-    </div>
 <!-- First box with all buttons and word input -->
   <div class="columns">
     <div class="column1">
     <div class="tile is-ancestor">
-    <div class="tile is-vertical" style="width:350px;">
-    <div class="tile" id="retryCard">
-    <div class="tile is-parent is-vertical">
-    <article class="tile is-child notification is-primary">
-      <input id="wordText" class="input is-small" type="text" placeholder="Word Input">
-      <button id="wordSubmit">Retry Word</button>
-      <button id="colorSubmit">Retry Color</button>
-      <button id="startOver">Start Over</button>
-      <div id="myModal" class="modal">
-        <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Please enter a real word </p>
-        </div>
-        </div>
-    </article>
-<!-- Second box  -->
+      <div class="tile is-parent is-vertical">
+    <div class="tile" style="width:250px;">
         <article class="tile is-child notification is-warning">
           <p class="title" id="searchedWord">Word Box </p></article> </div></div>
-<!-- Third box in column 1 -->
-        <div class="tile is-parent is-vertical">
+        <div class="tile is-parent is-vertical" style="width:250px;">
           <article id="color0" class="tile is-child notification colorTile">
           <p class="title">Color Box</p></article>
-        </div></div>
+        </div></div></div>
       
       <div class="column2">
         <div class="tile is-parent is-vertical" >
         <div class="tile is-vertical" style="width:250px;">
-          <article class="tile is-spouse notification is-info">
-          <p class="title" id="word1">Word 1</p></article>
+          <article id="color1" class="tile is-spouse notification is-info colorTile">
+            <p class="title" >Color 1</p></article>
       <div class="tile is-spouse is-vertical">
-        <article id="color1" class="tile is-spouse notification is-info colorTile">
-        <p class="title" >Color 1</p></article>
+        <article class="tile is-spouse notification is-info">
+          <p class="title" id="word1">Word 1</p></article>
       </div></div></div></div>
 
       <div class="column3">
@@ -87,11 +83,11 @@
         <div class="column4">
           <div class="tile is-parent is-vertical">
             <div class="tile is-vertical" style="width:250px;">
-            <article class="tile is-spouse notification is-info">
+              <article id="color3" class="tile is-spouse notification is-info colorTile">
+                <p class="title">Color 3</p></article>
+          <article class="tile is-spouse notification is-info">
             <p class="title" id="word3">Word 3</p></article>
-          <div class="tile is-spouse is-vertical">
-            <article id="color3" class="tile is-spouse notification is-info colorTile">
-            <p class="title">Color 3</p></article>
+            <div class="tile is-spouse is-vertical">
           </div></div></div></div>
          
           <div class="column5">
