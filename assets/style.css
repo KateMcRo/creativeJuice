@@ -3,17 +3,14 @@
     --soft-white: #fcfdf4;
     /* no seriously, daylight has a known color, this should be close */
     --daylight: #f4f4fc;
-    --daylight: #f4f4fc;
     --lavender: #e4e0fd;
     --lime: #5af7a2;
     --coral: #fbbdbd;
-    --straw: #fff8ea;
     --straw: #fff8ea;
     --orange-smoothie: #ffccae;
     --slate-blue: #a9b3cc;
     --deep-scarlet: #e80040;
     --primary-green: #00d1b2;
-    --pale-indigo: #e5e7fa;
     --pale-indigo: #e5e7fa;
 }
 
@@ -21,7 +18,6 @@ html {
     background-color: var(--daylight);
     color: black;
     /* these settings may change depending on how things look */
-    width: 100%;
     width: 100%;
     margin-left: 2%;
     margin-right: 2%;
@@ -34,12 +30,10 @@ html {
 body {
     background-color: rgb(241, 250, 253);
     width: 100%;
-    width: 100%;
 }
 
 header {
     width: 100%;
-    text-align: inherit;
     text-align: inherit;
 }
 
@@ -71,8 +65,6 @@ header h1 {
     margin: 0 0.25rem 1.5rem 0;
     width: 30rem;
     height: 12rem;
-    width: 30rem;
-    height: 12rem;
 }
 
 .pickBox {
@@ -87,25 +79,7 @@ header h1 {
     display: inline-flex;
     flex: wrap;
     background-color: var(--pale-indigo);
-.navbar {
-    display: inline-flex;
-    flex: wrap;
-    background-color: var(--pale-indigo);
     color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-right: 0.75rem;
-    max-height: 5%;
-}
-
-#navbarBasicExample {
-  background-color: var(--pale-indigo);
-}
-
-.navbar-link {
-
-  background-color: var(--pale-indigo);
-  margin-right: 0.75rem;
     font-size: 1.2rem;
     font-weight: 500;
     margin-right: 0.75rem;
@@ -136,20 +110,6 @@ header h1 {
 .navbar-end {
   background-color: var(--pale-indigo);
 }
-.navbar-burgar, .navbar-brand, .navbar-dropdown, .navbar-item {
-
-      background-color: var(--pale-indigo);
-    }
-  
-    .navbar-dropdown a {
-      background-color: rgb(255, 255, 255);
-      font-weight: 500;
-    }
-
-
-.navbar-end {
-  background-color: var(--pale-indigo);
-}
 
 #landingContainer {
     display: flex;
@@ -158,7 +118,6 @@ header h1 {
     justify-content: space-evenly;
     align-items: center;
     justify-content: center;
-    background-color: #fffdfa;
     background-color: #fffdfa;
     border-color: lightgrey;
     border-radius: 4px;
@@ -186,11 +145,6 @@ header h1 {
   max-width: 40rem;
 }
 
-#quote1, #quote2 {
-  margin: 0.75rem;
-  max-width: 40rem;
-}
-
 /* #searchBtn {
 
 } */
@@ -198,21 +152,16 @@ header h1 {
 #startBtn {
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: center;
     color: white;
-    font-size: 1.6rem;
     font-size: 1.6rem;
     font-weight: 600;
     justify-content: center;
     background-color: var(--primary-green);
     padding: 0.625rem;
     width: 15rem;
-    padding: 0.625rem;
-    width: 15rem;
     /* more people should use border-radius */
     border-radius: 8px;
     margin-top: 4.5rem;
-    margin-left: 24%;
     margin-left: 24%;
     margin-bottom: 2rem;
 }
@@ -227,72 +176,16 @@ header h1 {
 #colorPick {
   display: flex;
   flex-direction: column;
-#selectedColor {
-  border-color: black;
-  border: dashed;
-  padding: 2px;
-  border-width: 3px;
 }
-
-#colorPick {
-  display: flex;
-  flex-direction: column;
-}
-
 
 
 #colorName {
     text-align: center;
     margin: 0.25rem 0.75rem;
     font-size: 1.625rem;
-    text-align: center;
-    margin: 0.25rem 0.75rem;
-    font-size: 1.625rem;
     font-weight: 600;
 }
 
-#inputArea {
-  margin-top: 2.5rem;
-  display:flex;
-  flex: wrap;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#inputArea div {
-  direction: flex;
-  flex: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#inputArea div div article {
-  background-color: #07E4C9;
-  border-radius: 6px;
-  width: 24;
-}
-
-#submitHomeBtns
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-
-#retryCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 2.2rem;
-
-}
-
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 #inputArea {
   margin-top: 2.5rem;
   display:flex;
@@ -339,7 +232,6 @@ header h1 {
 #wordSubmit {
     color: black;
     font-size: 1.25rem;
-    font-size: 1.25rem;
     font-weight: 500;
     background-color: var(--primary-green);
     background-color: rgb(247, 236, 198);
@@ -348,37 +240,30 @@ header h1 {
     border-radius: 6px;
     text-align: center;
     width: 9.25rem; 
-    width: 9.25rem; 
 }
 
 
 
 /* #colorSubmit {
-/* #colorSubmit {
     text-align: center;
     font-size: 1.2rem;
     color: black;
-    background-color: rgb(189, 208, 236);
     background-color: rgb(189, 208, 236);
     margin: 6px 0 12px 0;
     padding: 4px;
     border-radius: 6px;
     min-width: 7rem;
 } */
-} */
 
 #startOver {
     text-align: center;
     font-size: 1.25rem;
-    font-size: 1.25rem;
     font-weight: 500;
     color: black;
-    background-color: rgb(203, 190, 233);
     background-color: rgb(203, 190, 233);
     margin: 6px 0 12px 0;
     padding: 4px;
     border-radius: 6px;
-    width: 9.25rem;
     width: 9.25rem;
 }
 
@@ -449,15 +334,7 @@ header h1 {
 
   #searchedWord, #word1, #word2, #word3, #word4 {
     font-size: 1.5rem;
-    font-size: 1.5rem;
     color: black;
-  }
-
-  .colorTile {
-    text-shadow: rgb(172, 171, 171) 2px 2px 2px;
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 500;
   }
 
   .colorTile {
@@ -468,22 +345,6 @@ header h1 {
   }
 
   .colorTile p {
-    font-size: 1.5rem;
-  }
-
-.column1, .column2, .column3, .column4, .column5 {
-  width: 18%;
-}
-
-
-.column1 div div article, .column2 div div div article, .column3 div div article, .column4 div div article, .column5 div div article
-   {
-    background-color: rgba(247, 237, 223, 0.918);
-    border: solid;
-    border-color: rgb(218, 215, 210);
-    border-radius: 6px;
-    min-height: 4.2rem;
-    border-width: 1px;
     font-size: 1.5rem;
   }
 
