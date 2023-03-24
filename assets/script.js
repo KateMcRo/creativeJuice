@@ -303,6 +303,7 @@ function hideLanding(){
     colorPick.style.display = "flex";
     let resultsPage  = document.querySelector(".columns");
     resultsPage.style.display = "flex";
+    
 }
 hideResults();
 // Event Listeners
