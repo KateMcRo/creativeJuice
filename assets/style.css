@@ -17,7 +17,7 @@ html {
     background-color: var(--daylight);
     color: black;
     /* these settings may change depending on how things look */
-    width: 100%;
+    width: fit-content;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -28,7 +28,7 @@ html {
 
 body {
     background-color: rgb(241, 250, 253);
-
+    width: fit-content;
 }
 
 header {
@@ -163,6 +163,7 @@ body p {
 }
 
 
+
 #colorSubmit {
     text-align: center;
     font-size: 1.2rem;
@@ -250,3 +251,13 @@ body p {
   .column5 {
     margin-right: 0.75rem;
   }
+
+  #searchedWord, #word1, #word2, #word3, #word4 {
+    font-size: 1.6rem;
+    color: black;
+  }
+
+  .colorTile p {
+    font-size: 1.6rem;
+  }
+
