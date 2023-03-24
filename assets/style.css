@@ -253,11 +253,12 @@ body p {
   }
 
   #searchedWord, #word1, #word2, #word3, #word4 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: black;
   }
 
+  /* test comment */
   .colorTile p {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
