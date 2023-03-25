@@ -30,6 +30,8 @@ const colorPickerArray = [
     "#F6F1EA",
     "#C6B2A2",
     "#62351B",
+    "#FFBD59",
+    "#FF914D",
     "#FF3131",
     "#FF5757",
     "#FF66C4",
@@ -46,8 +48,6 @@ const colorPickerArray = [
     "#7ED957",
     "#C1FF72",
     "#FFDE59",
-    "#FFBD59",
-    "#FF914D",
 ]
 
 // Color Elements
