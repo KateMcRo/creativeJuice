@@ -377,6 +377,7 @@ header h1 {
 }
 
 
+<<<<<<< HEAD
 .column1 div div article,
 .column2 div div div article,
 .column3 div div article,
@@ -390,6 +391,25 @@ header h1 {
   height: fit-content;
   min-height: 4.2rem;
   border-width: 1px;
+=======
+.column1 div div article, .column2 div div div article, .column3 div div article, .column4 div div article, .column5 div div article
+   {
+    background-color: rgba(247, 237, 223, 0.918);
+    border: solid;
+    border-color: rgb(218, 215, 210);
+    border-radius: 6px;
+    min-height: 4.2rem;
+    border-width: 1px;
+  }
+
+  .bulma-fa-mixin {
+    background-color: lavender;
+  }
+#color0, #color1, #color2, #color3, #color4 {
+  background-color: rgb(224, 224, 224);
+  border-radius: 6px;
+  border: none;
+>>>>>>> dfdf0f2b2ea7cd709537dcc9c785428572479c5c
 }
 
 #color0,
@@ -406,6 +426,10 @@ header h1 {
 
 /* ---------------leave-this-divider-plz----------------- */
 
+<<<<<<< HEAD
 .bulma-fa-mixin {
   background-color: transparent;
 }
+=======
+
+>>>>>>> dfdf0f2b2ea7cd709537dcc9c785428572479c5c
