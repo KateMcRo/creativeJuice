@@ -364,7 +364,6 @@ header h1 {
   }
 
   .bulma-fa-mixin {
-    @include fa(1rem, 2rem);
     background-color: lavender;
   }
 #color0, #color1, #color2, #color3, #color4 {
@@ -372,6 +371,7 @@ header h1 {
   border-radius: 6px;
   border: none;
 }
+
 
 
 
