@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/reset.css">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
@@ -47,14 +48,13 @@
                 </div>
               </div>
             </div>
-            <div id="savedColors" class="navbar-item has-dropdown is-hoverable">
+            <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 Colors
               </a>
               <h1></h1>
       
-              <div class="navbar-dropdown">
-               
+              <div  id="savedColors"  class="navbar-dropdown">
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
     </div>
     </div>
 <!-- First box with all buttons and word input -->
-  <div class="columns">
+  <div id="content-grid" class="columns">
 
     <div class="column1">
       <div class="tile is-parent is-vertical">
@@ -138,17 +138,11 @@
             <p class="title" id="searchedWord">Word Box
             </p>
           </article>
-          <span class="bulma-fa-mixin">
-            <i class="fas fa-regular fa-thumbtack"></i>
-          </span>
 
           <div class="tile is-spouse is-vertical">
             <article id="color0" class="tile is-child notification colorTile">
               <p class="title">Color Box</p>
             </article>
-            <span class="bulma-fa-mixin">
-              <i class="fas fa-regular fa-thumbtack"></i>
-            </span>
           </div>
         </div>
       </div>
@@ -161,17 +155,12 @@
               <p class="title">Color 1 
                 </p>
             </article>
-            <span class="bulma-fa-mixin">
-              <i class="fas fa-regular fa-thumbtack"></i>
-            </span>  
 
             <div class="tile is-spouse is-vertical">
               <article class="tile is-spouse notification">
                 <p class="title" id="word1">Word 1</p>
               </article>
-              <span class="bulma-fa-mixin">
-                <i class="fas fa-regular fa-thumbtack"></i></p>
-              </span>
+              
             </div>
           </div>
         </div>
@@ -183,17 +172,12 @@
             <article class="tile is-spouse notification">
               <p class="title" id="word2">Word 2</p>
             </article>
-            <span class="bulma-fa-mixin">
-              <i class="fas fa-regular fa-thumbtack"></i>
-            </span>
 
             <div class="tile is-spouse is-vertical">
               <article id="color2" class="tile is-spouse notification colorTile">
                 <p class="title">Color 2</p>
               </article>
-              <span class="bulma-fa-mixin">
-                <i class="fas fa-regular fa-thumbtack"></i>
-              </span>
+              
             </div>
           </div>
         </div>
@@ -201,22 +185,16 @@
           
         <div class="column4">
           <div class="tile is-parent is-vertical">
-            <div class="tile is-vertical" style="width:  100%;">
-              <article id="color3" class="tile is-spouse notification colorTile">
-                <p class="title">Color 3</p>
-              </article>
-              <span class="bulma-fa-mixin">
-                <i class="fas fa-regular fa-thumbtack"></i>
-              </span>
-              
-          <article class="tile is-spouse notification">
-            <p class="title" id="word3">Word 3</p>
-          </article>
-          <span class="bulma-fa-mixin">
-            <i class="fas fa-regular fa-thumbtack"></i>
-          </span>
-            <div class="tile is-spouse is-vertical">
-          </div></div></div></div>
+              <div class="tile is-vertical" style="width:  100%;">
+                <article id="color3" class="tile is-spouse notification colorTile">
+                  <p class="title">Color 3</p>
+                </article>
+                
+                <article class="tile is-spouse notification">
+                  <p class="title" id="word3">Word 3</p>
+                </article>
+                  <div class="tile is-spouse is-vertical">
+            </div></div></div></div>
          
           <div class="column5">
             <div class="tile is-parent is-vertical">
@@ -224,16 +202,12 @@
               <article class="tile is-spouse notification">
               <p class="title" id="word4">Word 4</p>
             </article>
-            <span class="bulma-fa-mixin">
-              <i class="fas fa-regular fa-thumbtack"></i>
-            </span>
+            
             <div class="tile is-spouse is-vertical">
               <article id="color4" class="tile is-spouse notification colorTile">
               <p class="title">Color 4</p>
             </article>
-            <span class="bulma-fa-mixin">
-              <i class="fas fa-regular fa-thumbtack"></i>
-            </span>
+            
             </div></div></div></div>
           
        </div>
