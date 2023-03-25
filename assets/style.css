@@ -3,15 +3,15 @@
   --soft-white: #fcfdf4;
   /* no seriously, daylight has a known color, this should be close */
   --daylight: #fcfcff;
-  --lavender: #e0e0e0;
-  --lime: #5af7a2;
-  --coral: #fbbdbd;
   --straw: #e0e0e0;
-  --orange-smoothie: #ffccae;
   --slate-blue: #a9b3cc;
   --deep-scarlet: #e80040;
   --primary-green: #00d1b2;
-  --aluminum: rgb(228, 228, 228);
+  --aluminum: #d8d8d8;
+  /* --orange-smoothie: #ffccae; */
+  /* --lavender: #e0e0e0; */
+  /* --lime: #5af7a2; */
+  /* --coral: #fbbdbd; */
 
 }
 
@@ -71,31 +71,35 @@ header h1 {
 }
 
 .navbar {
-  display: inline-flex;
-  flex: wrap;
-  background-color: var(--aluminum);
+  /* display: inline-flex;
+  flex: wrap; */
+  background: linear-gradient(#8a8a8a, #cccccc);
+  /* background-color: var(--aluminum); */
   color: black;
   font-size: 1.2rem;
   font-weight: 500;
   max-height: 5%;
 }
 
-#navbarBasicExample {
-  background-color: var(--aluminum);
+.navbar-item {
+  display: wrap;
+  flex-wrap: wrap;
 }
 
 .navbar-link {
 
-  background-color: var(--aluminum);
-  margin-right: 0.75rem;
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
+  /* margin-right: 0.75rem; */
 }
 
+#navbarBasicExample,
 .navbar-burgar,
 .navbar-brand,
 .navbar-dropdown,
 .navbar-item {
-
-  background-color: var(--aluminum);
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
 }
 
 .navbar-dropdown a {
@@ -105,7 +109,8 @@ header h1 {
 
 
 .navbar-end {
-  background-color: var(--aluminum);
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
 }
 
 #landingContainer {
@@ -171,6 +176,9 @@ header h1 {
 }
 
 #colorName {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   margin: 0.25rem 0.75rem;
   font-size: 1.625rem;
@@ -223,10 +231,12 @@ header h1 {
   max-width: 30rem;
 }
 
+/* wordCard (delete comment before final build) */
 #inputArea div div article {
-  background-color: #f5ecd2;
+  background: linear-gradient(#8a8a8a, #e2e2e2);
   width: 24rem;
   border: solid 1px lightgrey;
+  border-radius: 16px;
 }
 
 #submitHomeBtns {
@@ -240,10 +250,10 @@ header h1 {
   color: black;
   font-size: 1.25rem;
   font-weight: 500;
-  background-color: rgb(184, 209, 218);
+  background: linear-gradient(#a9bcc4, #d1e6ee);
   margin: 6px 4px 12px 0;
   padding: 4px;
-  border-radius: 6px;
+  border-radius: 16px;
   text-align: center;
   width: 8rem;
 }
@@ -253,10 +263,10 @@ header h1 {
   font-size: 1.25rem;
   font-weight: 500;
   color: black;
-  background-color: rgb(192, 192, 192);
+  background: linear-gradient(#838383, #cacaca);
   margin: 6px 0 12px 0;
   padding: 4px;
-  border-radius: 6px;
+  border-radius: 16px;
   width: 8rem;
 }
 
@@ -292,7 +302,7 @@ header h1 {
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */
