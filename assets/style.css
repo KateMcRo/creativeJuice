@@ -1,9 +1,10 @@
 /* CSS styling elements go here */
 :root {
   --daylight: #fcfcff;
+  /* deep scarlet is for de-bugging */
   --deep-scarlet: #e80040;
-  --primary-green: #00d1b2;
   --aluminum: #d8d8d8;
+  /* --primary-green: #00d1b2; */
   /* --soft-white: #fcfdf4; */
   /* --straw: #e0e0e0; *
   /* --slate-blue: #a9b3cc; */
@@ -71,50 +72,48 @@ header h1 {
 }
 
 .navbar {
-  /* display: inline-flex;
-  flex: wrap; */
   background: linear-gradient(#8a8a8a, #cccccc);
-  /* background-color: var(--aluminum); */
   color: black;
   font-size: 1.2rem;
   font-weight: 500;
-  max-height: 5%;
+  max-height: 5rem;
 }
 
 .navbar-item {
   display: wrap;
   flex-wrap: wrap;
+  background: transparent;
+  max-width: fit-content;
 }
 
 .navbar-link {
-  /* background-color: var(--aluminum); */
+  display: flex;
+  /* flex-wrap: wrap; */
   background: linear-gradient(#8a8a8a, #cccccc);
-  /* margin-right: 0.75rem; */
 }
 
 #navbarBasicExample,
 .navbar-burgar,
-.navbar-brand,
-.navbar-dropdown,
-.navbar-item {
-  /* background-color: var(--aluminum); */
+.navbar-brand
+{
   background: linear-gradient(#8a8a8a, #cccccc);
 }
 
-.navbar-dropdown a {
-  background-color: white;
+.navbar-dropdown, .navbar-dropdown a {
+  background: linear-gradient (white, white);
   font-weight: 500;
 }
 
 
 .navbar-end {
-  /* background-color: var(--aluminum); */
-  background: linear-gradient(#8a8a8a, #cccccc);
+  background: transparent;
+  /* background: linear-gradient(#8a8a8a, #cccccc); */
 }
 
 #landingContainer {
   display: flex;
   flex-direction: row;
+  /* the line below is needed */
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -126,16 +125,16 @@ header h1 {
 
 .pictureContainer {
   margin: 0.75rem;
-  flex-wrap: wrap;
+  display: flex;
+  /* flex-wrap: wrap; */
   border-radius: 20px;
 }
 
 .quoteContainer {
   display: flex;
-  flex: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   font-size: 1.2rem;
   border-color: lightgrey;
 }
@@ -147,20 +146,25 @@ header h1 {
 }
 
 #startBtn {
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   color: white;
   font-size: 1.6rem;
   font-weight: 600;
   justify-content: center;
-  background-color: var(--primary-green);
   padding: 0.625rem;
   width: 15rem;
-  /* more people should use border-radius */
+  border: solid 1px lightgrey;
   border-radius: 8px;
   margin-top: 4.5rem;
   margin-left: 24%;
   margin-bottom: 2rem;
+}
+
+/* ID not currently used, may be in the future. If not, delete before final build */
+#colorWordPage {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .selectedColor {
@@ -172,6 +176,7 @@ header h1 {
 
 #colorName {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
@@ -184,6 +189,7 @@ header h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-content: space-around;
 }
 
 #wordInputHeader {
@@ -360,9 +366,14 @@ header h1 {
 }
 
 .colorTile {
+  display: flex;
+  flex-wrap: wrap;
   text-shadow: rgb(172, 171, 171) 2px 2px 2px;
   color: black;
   font-size: 1.25rem;
+  min-height: 7rem;
+  border-radius: 16px;
+  height: fit-content;
 }
 
 .colorTile p {
@@ -378,18 +389,26 @@ header h1 {
 }
 
 
-.column1 div div article,
+
+
+
+/* .column1 div div article,
 .column2 div div div article,
 .column3 div div article,
 .column4 div div article,
-.column5 div div article {
-  flex: wrap;
+.column5 div div article  */
+
+#wordTile {
+  /* display: flex;
+  flex-wrap: wrap; */
   background-color: #F4ECE1;
+  background: linear-gradient(to right, #faf7ee,#e2d1b1);
   border: solid;
   border-color: #DAD7D2;
   border-radius: 8px;
   height: fit-content;
-  min-height: 4.2rem;
+  min-height: 4.2rem, fit-content;
+  min-width: 15%;
   border-width: 1px;
 }
 
@@ -398,8 +417,8 @@ header h1 {
 #color2,
 #color3,
 #color4 {
-  flex: wrap;
-  background-color: rgb(224, 224, 224);
+  flex-wrap: wrap;
+  background: linear-gradient(to left, #E0E0E0,#d1d1d1);
   border-radius: 16px;
   border: none;
   min-height: 7rem;
