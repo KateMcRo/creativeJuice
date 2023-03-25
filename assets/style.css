@@ -13,37 +13,37 @@
     /* --coral: #fbbdbd; */
  
 }
- 
+
 html {
    background-color: var(--daylight);
    color: black;
 }
- 
+
 .hidden {
     visibility: hidden;
 }
- 
+
 body {
     background-color: var(--daylight);
 }
- 
+
 header {
     width: 100%;
     text-align: inherit;
 }
- 
+
 /* we likely own't even need this */
 header h1 {
     color: black;
     font-size: 4.2rem;
     font-weight: 400;
 }
- 
+
 #wordForm {
-   font-size: 1.6rem;
-   font-weight: 600;
-   width: 35%;
-   margin: 0.25rem 0.75rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: 35%;
+    margin: 0.25rem 0.75rem;
  }
  
 #wordForm input {
@@ -183,8 +183,6 @@ header h1 {
  }
  
  #wordInputHeader {
-   display: flex;
-   flex-wrap: wrap;
    text-align: center;
    margin: 0.25rem 0.75rem;
    font-size: 1.625rem;
@@ -275,67 +273,99 @@ header h1 {
  }
  
  
- /* The Modal (background) */
- .modal {
-   display: none;
-   /* Hidden by default */
-   position: fixed;
-   /* Stay in place */
-   z-index: 1;
-   /* Sit on top */
-   padding-top: 100px;
-   /* Location of the box */
-   left: 0;
-   top: 0;
-   width: 100%;
-   /* Full width */
-   height: 100%;
-   /* Full height */
-   overflow: auto;
-   /* Enable scroll if needed */
-   background-color: black;
-   /* Fallback color */
-   background-color: rgba(0, 0, 0, 0.4);
-   /* Black w/ opacity */
- }
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content  {
+
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-content p{
+  color: #000;
+  font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content  {
+
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-content p{
+  color: #000;
+  font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* results tiles */
  
- /* Modal Content  */
- .modal-content {
- 
-   background-color: #fefefe;
-   margin: auto;
-   padding: 20px;
-   border: 1px solid #888;
-   width: 80%;
- }
- 
- .modal-content p {
-   color: #000;
-   font-weight: bold;
- }
- 
- /* The Close Button */
- .close {
-   color: #aaaaaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
-   color: #000;
-   text-decoration: none;
-   cursor: pointer;
- }
- 
- /* results tiles */
- 
- .columns {
-   display: flex;
-   flex-wrap: flex;
-   flex-direction: row;
-   justify-content: center;
+.columns {
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: row;
+  justify-content: center;
  }
  
  .column1 {
@@ -346,20 +376,20 @@ header h1 {
    margin-right: 0.75rem;
  }
  
- #searchedWord,
- #word1,
- #word2,
- #word3,
- #word4 {
+#searchedWord,
+#word1,
+#word2,
+#word3,
+#word4 {
    font-size: 1.5rem;
    color: black;
- }
+}
  
- .colorTile {
-   /* text-shadow: rgb(172, 171, 171) 2px 2px 2px; */
-   color: black;
-   font-size: 1.25rem;
- }
+.colorTile {
+  text-shadow: #acacac 2px 2px 2px;
+  color: black;
+  font-size: 1.25rem;
+}
  
  .colorTile p {
    font-size: 1.5rem;
@@ -371,7 +401,7 @@ header h1 {
  .column4,
  .column5 {
    width: 18%;
- }
+}
  
  
  .column1 div div article,
@@ -387,22 +417,18 @@ header h1 {
    height: fit-content;
    min-height: 4.2rem;
    border-width: 1px;
- }
+}
  
- #color0,
- #color1,
- #color2,
- #color3,
- #color4 {
-   flex: wrap;
+#color0, #color1, #color2, #color3, #color4 {
+   /* flex: wrap; */
    background-color: rgb(224, 224, 224);
    border-radius: 16px;
    border: none;
    min-height: 7rem;
- }
- 
- /* ---------------leave-this-divider-plz----------------- */
- 
+}
+
+/* ---------------leave-this-divider-plz----------------- */
+
  .bulma-fa-mixin {
    background-color: transparent;
  }
