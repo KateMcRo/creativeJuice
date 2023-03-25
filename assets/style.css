@@ -1,13 +1,12 @@
 /* CSS styling elements go here */
 :root {
-  --soft-white: #fcfdf4;
-  /* no seriously, daylight has a known color, this should be close */
-  --daylight: #fcfcff;
-  --straw: #e0e0e0;
-  --slate-blue: #a9b3cc;
+ --daylight: #fcfcff;
   --deep-scarlet: #e80040;
   --primary-green: #00d1b2;
   --aluminum: #d8d8d8;
+  /* --soft-white: #fcfdf4; */
+  /* --straw: #e0e0e0; *
+  /* --slate-blue: #a9b3cc; */
   /* --orange-smoothie: #ffccae; */
   /* --lavender: #e0e0e0; */
   /* --lime: #5af7a2; */
@@ -87,7 +86,6 @@ header h1 {
 }
 
 .navbar-link {
-
   /* background-color: var(--aluminum); */
   background: linear-gradient(#8a8a8a, #cccccc);
   /* margin-right: 0.75rem; */
@@ -146,10 +144,6 @@ header h1 {
   margin: 0.75rem;
   max-width: 40rem;
 }
-
-/* #searchBtn {
-
-} */
 
 #startBtn {
   flex-wrap: wrap;
@@ -389,10 +383,10 @@ header h1 {
 .column4 div div article,
 .column5 div div article {
   flex: wrap;
-  background-color: rgba(243, 234, 222, 0.918);
+  background-color: #F4ECE1;
   border: solid;
-  border-color: rgb(218, 215, 210);
-  border-radius: 6px;
+  border-color: #DAD7D2;
+  border-radius: 8px;
   height: fit-content;
   min-height: 4.2rem;
   border-width: 1px;
@@ -405,13 +399,13 @@ header h1 {
 #color4 {
   flex: wrap;
   background-color: rgb(224, 224, 224);
-  border-radius: 6px;
+  border-radius: 16px;
   border: none;
+  min-height: 7rem;
 }
 
 /* ---------------leave-this-divider-plz----------------- */
 
 .bulma-fa-mixin {
-  @include fa(1rem, 2rem);
   background-color: transparent;
 }
