@@ -1,295 +1,309 @@
 /* CSS styling elements go here */
 :root {
-    --daylight: #fcfcff;
-    --deep-scarlet: #e80040;
-    --primary-green: #00d1b2;
-    --aluminum: #d8d8d8;
-    /* --soft-white: #fcfdf4; */
-    /* --straw: #e0e0e0; *
-    /* --slate-blue: #a9b3cc; */
-    /* --orange-smoothie: #ffccae; */
-    /* --lavender: #e0e0e0; */
-    /* --lime: #5af7a2; */
-    /* --coral: #fbbdbd; */
- 
+  --daylight: #fcfcff;
+  --deep-scarlet: #e80040;
+  --primary-green: #00d1b2;
+  --aluminum: #d8d8d8;
+  /* --soft-white: #fcfdf4; */
+  /* --straw: #e0e0e0; *
+  /* --slate-blue: #a9b3cc; */
+  /* --orange-smoothie: #ffccae; */
+  /* --lavender: #e0e0e0; */
+  /* --lime: #5af7a2; */
+  /* --coral: #fbbdbd; */
+
 }
 
 html {
-   background-color: var(--daylight);
-   color: black;
+  background-color: var(--daylight);
+  color: black;
 }
 
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 body {
-    background-color: var(--daylight);
+  background-color: var(--daylight);
 }
 
 header {
-    width: 100%;
-    text-align: inherit;
+  width: 100%;
+  text-align: inherit;
 }
 
 /* we likely own't even need this */
 header h1 {
-    color: black;
-    font-size: 4.2rem;
-    font-weight: 400;
+  color: black;
+  font-size: 4.2rem;
+  font-weight: 400;
 }
 
 #wordForm {
-    font-size: 1.6rem;
-    font-weight: 600;
-    width: 35%;
-    margin: 0.25rem 0.75rem;
- }
- 
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 35%;
+  margin: 0.25rem 0.75rem;
+}
+
 #wordForm input {
-     font-size: 1.2rem;
-     border-color: lightgrey;
-     border-radius: 8px;
+  font-size: 1.2rem;
+  border-color: lightgrey;
+  border-radius: 8px;
 }
- 
+
 #pickerDiv {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    margin: 0 1.5rem 1.5rem 0;
-    max-width: 30rem;
-    height: 10.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: 0 1.5rem 1.5rem 0;
+  max-width: 30rem;
+  height: 10.75rem;
 }
- 
+
 .pickBox {
-    height: 2.5rem;
-    width: 2.5rem;
-    border: 1px solid rgb(215, 215, 215);
-    margin: 0.25rem 0.5rem;
-    border-radius: 4px;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid rgb(215, 215, 215);
+  margin: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
 .navbar {
-    /* display: inline-flex;
-    flex: wrap; */
-    background: linear-gradient(#8a8a8a, #cccccc);
-    /* background-color: var(--aluminum); */
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
-    max-height: 5%;
+  /* display: inline-flex;
+  flex: wrap; */
+  background: linear-gradient(#8a8a8a, #cccccc);
+  /* background-color: var(--aluminum); */
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-height: 5%;
 }
- 
+
 .navbar-item {
-    display: wrap;
-    /* flex-wrap: wrap; */
+  display: wrap;
+  flex-wrap: wrap;
 }
- 
+
 .navbar-link {
-    /* background-color: var(--aluminum); */
-    background: linear-gradient(#8a8a8a, #cccccc);
-    /* margin-right: 0.75rem; */
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
+  /* margin-right: 0.75rem; */
 }
- 
-#navbarBasicExample, 
-.navbar-burgar, .navbar-brand, .navbar-dropdown, .navbar-item {
-    /* background-color: var(--aluminum); */
-    background: linear-gradient(#8a8a8a, #cccccc);
+
+#navbarBasicExample,
+.navbar-burgar,
+.navbar-brand,
+.navbar-dropdown,
+.navbar-item {
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
 }
- 
+
 .navbar-dropdown a {
-    background-color: white;
-    font-weight: 500;
+  background-color: white;
+  font-weight: 500;
 }
- 
- 
+
+
 .navbar-end {
-    /* background-color: var(--aluminum); */
-    background: linear-gradient(#8a8a8a, #cccccc);
+  /* background-color: var(--aluminum); */
+  background: linear-gradient(#8a8a8a, #cccccc);
 }
- 
+
 #landingContainer {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    justify-content: space-evenly;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--daylight);
-    border: none;
-    margin: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--daylight);
+  border: none;
+  margin: 0.75rem;
 }
- 
- .pictureContainer {
-   margin: 0.75rem;
-   flex-wrap: wrap;
-   border-radius: 20px;
- }
- 
- .quoteContainer {
-   display: flex;
-   flex: wrap;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   font-size: 1.2rem;
-   border-color: lightgrey;
- }
- 
- #quote1,
- #quote2 {
-   margin: 0.75rem;
-   max-width: 40rem;
- }
- 
- #startBtn {
-   flex-wrap: wrap;
-   justify-content: center;
-   color: white;
-   font-size: 1.6rem;
-   font-weight: 600;
-   justify-content: center;
-   background-color: var(--primary-green);
-   padding: 0.625rem;
-   width: 15rem;
-   /* more people should use border-radius */
-   border-radius: 8px;
-   margin-top: 4.5rem;
-   margin-left: 24%;
-   margin-bottom: 2rem;
- }
- 
- .selectedColor {
-   border-color: black;
-   border: dashed;
-   padding: 2px;
-   border-width: 3px;
- }
- 
- #colorName {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   margin: 0.25rem 0.75rem;
-   font-size: 1.625rem;
-   font-weight: 500;
- }
- 
- #colorPick {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
- }
- 
- #wordInputHeader {
-   text-align: center;
-   margin: 0.25rem 0.75rem;
-   font-size: 1.625rem;
-   font-weight: 500;
- }
- 
- #retryCard {
-   display: flex;
-   flex-wrap: flex;
-   flex-direction: column;
-   justify-content: center;
- }
- 
- #inputArea {
-   display: flex;
-   flex: wrap;
-   margin-top: 2.5rem;
-   margin-bottom: 0.75rem;
-   flex-direction: row;
-   justify-content: center;
-   min-height: fit-content;
- }
- 
- #inputArea div {
-   direction: flex;
-   flex: wrap;
-   flex-direction: column;
-   justify-content: center;
- }
- 
- #inputArea div div {
-   direction: flex;
-   flex: wrap;
-   flex-direction: row;
-   max-width: 30rem;
- }
- 
- /* wordCard (delete comment before final build) */
- #inputArea div div article {
-   background: linear-gradient(#8a8a8a, #e2e2e2);
-   width: 24rem;
-   border: solid 1px lightgrey;
-   border-radius: 16px;
- }
- 
- #submitHomeBtns {
-   display: flex;
-   flex: wrap;
-   flex-direction: row;
-   justify-content: space-evenly;
- }
- 
- #wordSubmit {
-   color: black;
-   font-size: 1.25rem;
-   font-weight: 500;
-   background: linear-gradient(#a9bcc4, #d1e6ee);
-   margin: 6px 4px 12px 0;
-   padding: 4px;
-   border-radius: 16px;
-   text-align: center;
-   width: 8rem;
- }
- 
- #startOver {
-   text-align: center;
-   font-size: 1.25rem;
-   font-weight: 500;
-   color: black;
-   background: linear-gradient(#838383, #cacaca);
-   margin: 6px 0 12px 0;
-   padding: 4px;
-   border-radius: 16px;
-   width: 8rem;
- }
- 
- #wordText {
-   background-image: none;
-   font-size: 1.2rem;
-   margin-top: 0.2rem;
-   margin-bottom: 0.6rem;
- }
- 
- #retryCard {
-   max-width: 30%;
-   min-height: fit-content;
-   max-height: 12rem;
- }
- 
- 
+
+.pictureContainer {
+  margin: 0.75rem;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+.quoteContainer {
+  display: flex;
+  flex: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  border-color: lightgrey;
+}
+
+#quote1,
+#quote2 {
+  margin: 0.75rem;
+  max-width: 40rem;
+}
+
+#startBtn {
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  justify-content: center;
+  background-color: var(--primary-green);
+  padding: 0.625rem;
+  width: 15rem;
+  /* more people should use border-radius */
+  border-radius: 8px;
+  margin-top: 4.5rem;
+  margin-left: 24%;
+  margin-bottom: 2rem;
+}
+
+.selectedColor {
+  border-color: black;
+  border: dashed;
+  padding: 2px;
+  border-width: 3px;
+}
+
+#colorName {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0.25rem 0.75rem;
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+
+#colorPick {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#wordInputHeader {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0.25rem 0.75rem;
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+
+#retryCard {
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#inputArea {
+  display: flex;
+  flex: wrap;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  flex-direction: row;
+  justify-content: center;
+  min-height: fit-content;
+}
+
+#inputArea div {
+  direction: flex;
+  flex: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#inputArea div div {
+  direction: flex;
+  flex: wrap;
+  flex-direction: row;
+  max-width: 30rem;
+}
+
+/* wordCard (delete comment before final build) */
+#inputArea div div article {
+  background: linear-gradient(#8a8a8a, #e2e2e2);
+  width: 24rem;
+  border: solid 1px lightgrey;
+  border-radius: 16px;
+}
+
+#submitHomeBtns {
+  display: flex;
+  flex: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#wordSubmit {
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background: linear-gradient(#a9bcc4, #d1e6ee);
+  margin: 6px 4px 12px 0;
+  padding: 4px;
+  border-radius: 16px;
+  text-align: center;
+  width: 8rem;
+}
+
+#startOver {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: black;
+  background: linear-gradient(#838383, #cacaca);
+  margin: 6px 0 12px 0;
+  padding: 4px;
+  border-radius: 16px;
+  width: 8rem;
+}
+
+#wordText {
+  background-image: none;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+#retryCard {
+  max-width: 30%;
+  min-height: fit-content;
+  max-height: 12rem;
+}
+
+
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
-/* Modal Content */
-.modal-content  {
+/* Modal Content  */
+.modal-content {
 
   background-color: #fefefe;
   margin: auto;
@@ -297,49 +311,8 @@ header h1 {
   border: 1px solid #888;
   width: 80%;
 }
-.modal-content p{
-  color: #000;
-  font-weight: bold;
-}
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content  {
-
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-.modal-content p{
+.modal-content p {
   color: #000;
   font-weight: bold;
 }
@@ -360,75 +333,80 @@ header h1 {
 }
 
 /* results tiles */
- 
+
 .columns {
   display: flex;
   flex-wrap: flex;
   flex-direction: row;
   justify-content: center;
- }
- 
- .column1 {
-   margin-left: 0.75rem;
- }
- 
- .column5 {
-   margin-right: 0.75rem;
- }
- 
+}
+
+.column1 {
+  margin-left: 0.75rem;
+}
+
+.column5 {
+  margin-right: 0.75rem;
+}
+
 #searchedWord,
 #word1,
 #word2,
 #word3,
 #word4 {
-   font-size: 1.5rem;
-   color: black;
+  font-size: 1.5rem;
+  color: black;
 }
- 
+
 .colorTile {
-  text-shadow: #acacac 2px 2px 2px;
+  text-shadow: rgb(172, 171, 171) 2px 2px 2px;
   color: black;
   font-size: 1.25rem;
 }
- 
- .colorTile p {
-   font-size: 1.5rem;
- }
- 
- .column1,
- .column2,
- .column3,
- .column4,
- .column5 {
-   width: 18%;
+
+.colorTile p {
+  font-size: 1.5rem;
 }
- 
- 
- .column1 div div article,
- .column2 div div div article,
- .column3 div div article,
- .column4 div div article,
- .column5 div div article {
-   flex: wrap;
-   background-color: #F4ECE1;
-   border: solid;
-   border-color: #DAD7D2;
-   border-radius: 8px;
-   height: fit-content;
-   min-height: 4.2rem;
-   border-width: 1px;
+
+.column1,
+.column2,
+.column3,
+.column4,
+.column5 {
+  width: 18%;
 }
- 
-#color0, #color1, #color2, #color3, #color4 {
-   /* flex: wrap; */
-   background-color: rgb(224, 224, 224);
-   border-radius: 16px;
-   border: none;
-   min-height: 7rem;
+
+
+.column1 div div article,
+.column2 div div div article,
+.column3 div div article,
+.column4 div div article,
+.column5 div div article {
+  flex: wrap;
+  background-color: #F4ECE1;
+  border: solid;
+  border-color: #DAD7D2;
+  border-radius: 8px;
+  height: fit-content;
+  min-height: 4.2rem;
+  border-width: 1px;
 }
+
+#color0,
+#color1,
+#color2,
+#color3,
+#color4 {
+  flex: wrap;
+  background-color: rgb(224, 224, 224);
+  border-radius: 16px;
+  border: none;
+  min-height: 7rem;
+}
+
 
 /* ---------------leave-this-divider-plz----------------- */
 
- .bulma-fa-mixin {
-   background-color: transparent;
- }
+.bulma-fa-mixin {
+  background-color: transparent;
+}
