@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-    <title>Creative Juice</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+  <title>Creative Juice</title>
 </head>
+
 <body>
-    <header>
-        
-    
-    
+  <header>
+
+
+
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="https://katemcro.github.io/creativeJuice/">
@@ -48,13 +52,14 @@
                 </div>
               </div>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable">
+            <div id="savedColors" class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 Colors
               </a>
               <h1></h1>
       
-              <div  id="savedColors"  class="navbar-dropdown">
+              <div class="navbar-dropdown">
+               
               </div>
             </div>
           </div>
@@ -71,65 +76,70 @@
                 <a class="navbar-item">
                   Maninder Manan
 
-                </a>
-                <a class="navbar-item">
-                  Dan McKay
-                </a>
-                <a class="navbar-item">
-                  Paul Mendoza
-                </a>
-                <a class="navbar-item">
-                   Kate Rogers
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
+          </a>
+          <a class="navbar-item">
+            Dan McKay
+          </a>
+          <a class="navbar-item">
+            Paul Mendoza
+          </a>
+          <a class="navbar-item">
+            Kate Rogers
+          </a>
         </div>
-          </div>
+      </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
         </div>
-      </nav>
-    </header>
+      </div>
+      </div>
+    </nav>
+  </header>
 
-    <div id="landingContainer">
-        <div class="pictureContainer" width="400px">
-          <img src="./assets/images/CJtitle-removebg-preview.png">
-        </div>
-
-        <div id="quoteContainer">
-            <p class="mb-4 none d-md-block" id="quote1"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
-            <p id="quote2"> When you have creative <b>block</b> or design paralysis, <br> all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></p>
-            <button id="startBtn">Lets Begin!</button>
-        </div>
+  <div id="landingContainer">
+    <div class="pictureContainer" width="400px">
+      <img src="./assets/images/CJtitle-removebg-preview.png">
     </div>
 
-    <div id="inputArea">
-      <div id="colorPick">
-        <p id="colorName">Select a Color</p>
-        <div id="pickerDiv">  
-        </div></div>
+    <div id="quoteContainer">
+      <p class="mb-4 none d-md-block" id="quote1"><strong>"It's hard to start from nothing"</strong> - David Byrne
+        (Talking Heads)</p>
+      <p id="quote2"> When you have creative <b>block</b> or design paralysis, <br> all it takes are little
+        <i>beginnings</i> to create your next <b>masterpiece</b></p>
+      <button id="startBtn">Lets Begin!</button>
+    </div>
+  </div>
 
-        <div class="tile" id="retryCard">
-          <div class="tile is-parent is-vertical">
+  <div id="inputArea">
+    <div id="colorPick">
+      <p id="colorName">Select a Color</p>
+      <div id="pickerDiv">
+      </div>
+    </div>
+
+    <div id="wordInputHeader">
+      <p>Select a Word</p>
+      <div class="tile" id="retryCard">
+        <div class="tile is-parent is-vertical">
           <article class="tile is-child notification is-primary">
-            <input id="wordText" class="input is-small" type="text" placeholder="Word Input">
-            <section id="submitHomeBtns">
-            <span id="wordHomeBtns"><button id="wordSubmit">Submit</button>
-            <button id="startOver">Home</button></span>
-            </section>
+            <input id="wordText" class="input is-small" type="text" placeholder="Enter Word">
+            <span id="submitHomeBtns">
+              <button id="wordSubmit">Submit</button>
+              <button id="startOver">Home</button></span>
+            </span>
             <div id="myModal" class="modal">
               <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>I don't know that word! Please try again.</p>
+                <span class="close">&times;</span>
+                <p>I don't know that word! Please try again.</p>
               </div>
-              </div>
+            </div>
           </article>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
 <!-- First box with all buttons and word input -->
-  <div id="content-grid" class="columns">
+  <div class="columns">
 
     <div class="column1">
       <div class="tile is-parent is-vertical">
@@ -155,12 +165,17 @@
               <p class="title">Color 1 
                 </p>
             </article>
+            <span class="bulma-fa-mixin">
+              <i class="fas fa-regular fa-thumbtack"></i>
+            </span>  
 
             <div class="tile is-spouse is-vertical">
               <article class="tile is-spouse notification">
                 <p class="title" id="word1">Word 1</p>
               </article>
-              
+              <span class="bulma-fa-mixin">
+                <i class="fas fa-regular fa-thumbtack"></i></p>
+              </span>
             </div>
           </div>
         </div>
@@ -172,12 +187,17 @@
             <article class="tile is-spouse notification">
               <p class="title" id="word2">Word 2</p>
             </article>
+            <span class="bulma-fa-mixin">
+              <i class="fas fa-regular fa-thumbtack"></i>
+            </span>
 
             <div class="tile is-spouse is-vertical">
               <article id="color2" class="tile is-spouse notification colorTile">
                 <p class="title">Color 2</p>
               </article>
-              
+              <span class="bulma-fa-mixin">
+                <i class="fas fa-regular fa-thumbtack"></i>
+              </span>
             </div>
           </div>
         </div>
@@ -185,16 +205,22 @@
           
         <div class="column4">
           <div class="tile is-parent is-vertical">
-              <div class="tile is-vertical" style="width:  100%;">
-                <article id="color3" class="tile is-spouse notification colorTile">
-                  <p class="title">Color 3</p>
-                </article>
-                
-                <article class="tile is-spouse notification">
-                  <p class="title" id="word3">Word 3</p>
-                </article>
-                  <div class="tile is-spouse is-vertical">
-            </div></div></div></div>
+            <div class="tile is-vertical" style="width:  100%;">
+              <article id="color3" class="tile is-spouse notification colorTile">
+                <p class="title">Color 3</p>
+              </article>
+              <span class="bulma-fa-mixin">
+                <i class="fas fa-regular fa-thumbtack"></i>
+              </span>
+              
+          <article class="tile is-spouse notification">
+            <p class="title" id="word3">Word 3</p>
+          </article>
+          <span class="bulma-fa-mixin">
+            <i class="fas fa-regular fa-thumbtack"></i>
+          </span>
+            <div class="tile is-spouse is-vertical">
+          </div></div></div></div>
          
           <div class="column5">
             <div class="tile is-parent is-vertical">
@@ -202,17 +228,22 @@
               <article class="tile is-spouse notification">
               <p class="title" id="word4">Word 4</p>
             </article>
-            
+            <span class="bulma-fa-mixin">
+              <i class="fas fa-regular fa-thumbtack"></i>
+            </span>
             <div class="tile is-spouse is-vertical">
               <article id="color4" class="tile is-spouse notification colorTile">
               <p class="title">Color 4</p>
             </article>
-            
+            <span class="bulma-fa-mixin">
+              <i class="fas fa-regular fa-thumbtack"></i>
+            </span>
             </div></div></div></div>
           
        </div>
       </div>
   </div>
-    <script src= "./assets/script.js"></script> 
+  <script src="./assets/script.js"></script>
 </body>
+
 </html>
