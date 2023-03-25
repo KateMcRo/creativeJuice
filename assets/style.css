@@ -186,8 +186,8 @@ header h1 {
 }
 
 #wordInputHeader {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   text-align: center;
   margin: 0.25rem 0.75rem;
   font-size: 1.625rem;
