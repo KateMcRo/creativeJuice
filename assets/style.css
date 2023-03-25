@@ -1,54 +1,50 @@
 /* CSS styling elements go here */
 :root {
-    --soft-white: #fcfdf4;
-    /* no seriously, daylight has a known color, this should be close */
-    --daylight: #fcfcff;
-    --lavender: #e4e0fd;
-    --lime: #5af7a2;
-    --coral: #fbbdbd;
-    --straw: #fff8ea;
-    --orange-smoothie: #ffccae;
-    --slate-blue: #a9b3cc;
-    --deep-scarlet: #e80040;
-    --primary-green: #00d1b2;
-    --pale-indigo: #e5e7fa;
+  --soft-white: #fcfdf4;
+  /* no seriously, daylight has a known color, this should be close */
+  --daylight: #fcfcff;
+  --lavender: #e0e0e0;
+  --lime: #5af7a2;
+  --coral: #fbbdbd;
+  --straw: #e0e0e0;
+  --orange-smoothie: #ffccae;
+  --slate-blue: #a9b3cc;
+  --deep-scarlet: #e80040;
+  --primary-green: #00d1b2;
+  --aluminum: rgb(228, 228, 228);
+
 }
 
 html {
-    background-color: var(--daylight);
-    color: black;
-    /* these settings may change depending on how things look */
-    /* width: 100%; */
-    margin-left: 2%;
-    margin-right: 2%;
+  background-color: var(--daylight);
+  color: black;
 }
 
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 body {
-    background-color: var(--daylight);
-    /* width: 100%; */
+  background-color: var(--daylight);
 }
 
 header {
-    width: 100%;
-    text-align: inherit;
+  width: 100%;
+  text-align: inherit;
 }
 
 /* we likely own't even need this */
 header h1 {
-    color: black;
-    font-size: 4.2rem;
-    font-weight: 400;
+  color: black;
+  font-size: 4.2rem;
+  font-weight: 400;
 }
 
 #wordForm {
-    font-size: 1.6rem;
-    font-weight: 600;
-    width: 35%;
-    margin: 0.25rem 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 35%;
+  margin: 0.25rem 0.75rem;
 }
 
 #wordForm input {
@@ -57,88 +53,91 @@ header h1 {
   border-radius: 8px;
 }
 
-#pickerDiv { 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row; 
-    align-content: space-around;
-    margin: 0 1.5rem 1.5rem 0;
-    width: 30rem;
-    height: 15rem;
+#pickerDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin: 0 1.5rem 1.5rem 0;
+  max-width: 30rem;
+  height: 10.75rem;
 }
 
 .pickBox {
-    height: 2.5rem;
-    width: 2.5rem;
-    border: 1px solid rgb(215, 215, 215);
-    margin: 0.7rem 0.5rem;
-    border-radius: 4px;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid rgb(215, 215, 215);
+  margin: 0.25rem 0.5rem;
+  border-radius: 4px;
 }
 
 .navbar {
-    display: inline-flex;
-    flex: wrap;
-    background-color: var(--pale-indigo);
-    color: black;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-right: 0.75rem;
-    max-height: 5%;
+  display: inline-flex;
+  flex: wrap;
+  background-color: var(--aluminum);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  max-height: 5%;
 }
 
 #navbarBasicExample {
-  background-color: var(--pale-indigo);
+  background-color: var(--aluminum);
 }
 
 .navbar-link {
 
-  background-color: var(--pale-indigo);
+  background-color: var(--aluminum);
   margin-right: 0.75rem;
 }
- 
-.navbar-burgar, .navbar-brand, .navbar-dropdown, .navbar-item {
 
-      background-color: var(--pale-indigo);
-    }
-  
-    .navbar-dropdown a {
-      background-color: rgb(255, 255, 255);
-      font-weight: 500;
-    }
+.navbar-burgar,
+.navbar-brand,
+.navbar-dropdown,
+.navbar-item {
+
+  background-color: var(--aluminum);
+}
+
+.navbar-dropdown a {
+  background-color: white;
+  font-weight: 500;
+}
 
 
 .navbar-end {
-  background-color: var(--pale-indigo);
+  background-color: var(--aluminum);
 }
 
 #landingContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--daylight);
-    border: none;
-    margin: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--daylight);
+  border: none;
+  margin: 0.75rem;
 }
 
 .pictureContainer {
-    margin: 0.75rem;
-    flex-wrap: wrap;
-    border-radius: 20px;
+  margin: 0.75rem;
+  flex-wrap: wrap;
+  border-radius: 20px;
 }
 
 .quoteContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    font-size: 1.2rem;
-    border-color: lightgrey;
+  display: flex;
+  flex: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  border-color: lightgrey;
 }
 
-#quote1, #quote2 {
+#quote1,
+#quote2 {
   margin: 0.75rem;
   max-width: 40rem;
 }
@@ -148,20 +147,20 @@ header h1 {
 } */
 
 #startBtn {
-    flex-wrap: wrap;
-    justify-content: center;
-    color: white;
-    font-size: 1.6rem;
-    font-weight: 600;
-    justify-content: center;
-    background-color: var(--primary-green);
-    padding: 0.625rem;
-    width: 15rem;
-    /* more people should use border-radius */
-    border-radius: 8px;
-    margin-top: 4.5rem;
-    margin-left: 24%;
-    margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  justify-content: center;
+  background-color: var(--primary-green);
+  padding: 0.625rem;
+  width: 15rem;
+  /* more people should use border-radius */
+  border-radius: 8px;
+  margin-top: 4.5rem;
+  margin-left: 24%;
+  margin-bottom: 2rem;
 }
 
 .selectedColor {
@@ -171,25 +170,43 @@ header h1 {
   border-width: 3px;
 }
 
-#colorPick {
-  display: flex;
-  flex-direction: column;
+#colorName {
+  text-align: center;
+  margin: 0.25rem 0.75rem;
+  font-size: 1.625rem;
+  font-weight: 500;
 }
 
+#colorPick {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-#colorName {
-    text-align: center;
-    margin: 0.25rem 0.75rem;
-    font-size: 1.625rem;
-    font-weight: 600;
+#wordInputHeader {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0.25rem 0.75rem;
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+
+#retryCard {
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #inputArea {
-  margin-top: 2.5rem;
-  display:flex;
+  display: flex;
   flex: wrap;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
   flex-direction: row;
   justify-content: center;
+  min-height: fit-content;
 }
 
 #inputArea div {
@@ -199,177 +216,192 @@ header h1 {
   justify-content: center;
 }
 
+#inputArea div div {
+  direction: flex;
+  flex: wrap;
+  flex-direction: row;
+  max-width: 30rem;
+}
+
 #inputArea div div article {
-  background-color: #07E4C9;
-  border-radius: 6px;
-  width: 24;
+  background-color: #f5ecd2;
+  width: 24rem;
+  border: solid 1px lightgrey;
 }
 
-#submitHomeBtns
-{
+#submitHomeBtns {
   display: flex;
+  flex: wrap;
   flex-direction: row;
-  justify-content: space-between;
-}
-
-
-#retryCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 4.5rem;
-
-}
-
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #wordSubmit {
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 500;
-    background-color: var(--primary-green);
-    background-color: rgb(247, 236, 198);
-    margin: 6px 4px 12px 0;
-    padding: 4px;
-    border-radius: 6px;
-    text-align: center;
-    width: 10rem; 
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: rgb(184, 209, 218);
+  margin: 6px 4px 12px 0;
+  padding: 4px;
+  border-radius: 6px;
+  text-align: center;
+  width: 8rem;
 }
 
-
-
-/* #colorSubmit {
-    text-align: center;
-    font-size: 1.2rem;
-    color: black;
-    background-color: rgb(189, 208, 236);
-    margin: 6px 0 12px 0;
-    padding: 4px;
-    border-radius: 6px;
-    min-width: 7rem;
-} */
-
 #startOver {
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: black;
-    background-color: rgb(203, 190, 233);
-    margin: 6px 0 12px 0;
-    padding: 4px;
-    border-radius: 6px;
-    width: 10rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: black;
+  background-color: rgb(192, 192, 192);
+  margin: 6px 0 12px 0;
+  padding: 4px;
+  border-radius: 6px;
+  width: 8rem;
 }
 
 #wordText {
-    background-image: none;
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
+  background-image: none;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
 }
+
+#retryCard {
+  max-width: 30%;
+  min-height: fit-content;
+  max-height: 12rem;
+}
+
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content  {
-    
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  .modal-content p{
-    color: #000;
-    font-weight: bold;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  #retryCard {
-    max-width: 30%;
-    min-height: fit-content;
-    max-height: 12rem;
-  }
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 
-  .column1 {
-    margin-left: 0.75rem;
-  }
+/* Modal Content  */
+.modal-content {
 
-  .column5 {
-    margin-right: 0.75rem;
-  }
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
 
-  #searchedWord, #word1, #word2, #word3, #word4 {
-    font-size: 1.5rem;
-    color: black;
-  }
+.modal-content p {
+  color: #000;
+  font-weight: bold;
+}
 
-  .colorTile {
-    text-shadow: rgb(172, 171, 171) 2px 2px 2px;
-    color: black;
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-  .colorTile p {
-    font-size: 1.5rem;
-  }
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-.column1, .column2, .column3, .column4, .column5 {
+/* results tiles */
+
+.columns {
+  display: flex;
+  flex-wrap: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column1 {
+  margin-left: 0.75rem;
+}
+
+.column5 {
+  margin-right: 0.75rem;
+}
+
+#searchedWord,
+#word1,
+#word2,
+#word3,
+#word4 {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.colorTile {
+  text-shadow: rgb(172, 171, 171) 2px 2px 2px;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.colorTile p {
+  font-size: 1.5rem;
+}
+
+.column1,
+.column2,
+.column3,
+.column4,
+.column5 {
   width: 18%;
 }
 
 
-.column1 div div article, .column2 div div div article, .column3 div div article, .column4 div div article, .column5 div div article
-   {
-    background-color: rgba(247, 237, 223, 0.918);
-    border: solid;
-    border-color: rgb(218, 215, 210);
-    border-radius: 6px;
-    min-height: 4.2rem;
-    border-width: 1px;
-  }
+.column1 div div article,
+.column2 div div div article,
+.column3 div div article,
+.column4 div div article,
+.column5 div div article {
+  flex: wrap;
+  background-color: rgba(243, 234, 222, 0.918);
+  border: solid;
+  border-color: rgb(218, 215, 210);
+  border-radius: 6px;
+  height: fit-content;
+  min-height: 4.2rem;
+  border-width: 1px;
+}
 
-  .bulma-fa-mixin {
-    @include fa(1rem, 2rem);
-    background-color: lavender;
-  }
-#color0, #color1, #color2, #color3, #color4 {
+#color0,
+#color1,
+#color2,
+#color3,
+#color4 {
+  flex: wrap;
   background-color: rgb(224, 224, 224);
   border-radius: 6px;
   border: none;
 }
 
+/* ---------------leave-this-divider-plz----------------- */
 
-
+.bulma-fa-mixin {
+  @include fa(1rem, 2rem);
+  background-color: transparent;
+}
