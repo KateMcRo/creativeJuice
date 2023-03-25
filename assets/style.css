@@ -398,11 +398,17 @@ header h1 {
 #color3,
 #color4 {
   flex: wrap;
+  .bulma-fa-mixin {
+    background-color: lavender;
+  }
+#color0, #color1, #color2, #color3, #color4 {
   background-color: rgb(224, 224, 224);
   border-radius: 16px;
   border: none;
   min-height: 7rem;
 }
+
+/* ---------------leave-this-divider-plz----------------- */
 
 /* ---------------leave-this-divider-plz----------------- */
 
