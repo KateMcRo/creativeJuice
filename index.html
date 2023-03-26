@@ -13,86 +13,55 @@
     <title>Creative Juice</title>
 </head>
 <body>
-    <header>
-        
-    
-    
+  <header>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://katemcro.github.io/creativeJuice/">
-             <img src="./assets/images/Creative_Juice-removebg-preview.png" width="112" height="28"> 
-          </a>
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://katemcro.github.io/creativeJuice/">
+            <img src="./assets/images/Creative_Juice-removebg-preview.png" width="112" height="28"> 
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <!-- add stuff to the hamburger menu-->
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+          
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item"><!-- Home --></a>
+          <a class="navbar-item"><!-- Documentation --></a>
+
+          <div id="savedWords" class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Words</a>
+              <h1></h1>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Colors
+            </a>
+            <h1></h1>
+            <div  id="savedColors"  class="navbar-dropdown"></div>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">About Us</a>
+            <h1></h1>
+            <div  id="savedColors"  class="navbar-dropdown">
+              <a class="navbar-item">John Elmore</a>
+                <a class="navbar-item">Maninder Manan</a>
+                <a class="navbar-item">Dan McKay</a>
+                <a class="navbar-item">Paul Mendoza</a>
+                <a href= "https://github.com/KateMcRo" class="navbar-item">Kate Rogers</a>
+            </div>
+          </div>
         </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item">
-              <!-- Home -->
-            </a>
-      
-            <a class="navbar-item">
-              <!-- Documentation -->
-            </a>
-            <div id="savedWords" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  Words
-                </a>
-                <h1></h1>
+      </div>
+    </nav>
+  </header>
         
-                <div class="navbar-dropdown">
-                </div>
-              </div>
-            </div>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Colors
-              </a>
-              <h1></h1>
-      
-              <div  id="savedColors"  class="navbar-dropdown">
-              </div>
-            </div>
-          </div>
-       <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                About Us
-              </a>
-              <h1></h1>
-      
-              <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  John Elmore
-                </a>
-                <a class="navbar-item">
-                  Maninder Manan
-
-                </a>
-                <a class="navbar-item">
-                  Dan McKay
-                </a>
-                <a class="navbar-item">
-                  Paul Mendoza
-                </a>
-                <a class="navbar-item">
-                   Kate Rogers
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-        </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <div id="landingContainer">
+        <div id="landingContainer">
         <div class="pictureContainer" width="400px">
           <img src="./assets/images/CJtitle-removebg-preview.png">
         </div>

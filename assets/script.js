@@ -4,7 +4,7 @@ const startOverBtnEl = document.getElementById("startOver");
 const startBtnEl = document.getElementById("startBtn");
 
 // container elements
-const contentGrid = document.getElementById("content-grid")
+const contentGrid = document.getElementById("content-grid") // targeted entire results grid & added an event listener
 const savedColorsEl = document.getElementById("savedColors")
 
 
@@ -24,14 +24,6 @@ const apiKey = "57fdf6d363msh1895db180f9cc69p1d283ejsna643fadf6b23"
 
 const colorPickerContainerEl = document.getElementById("pickerDiv")
 const colorPickerArray = [
-    "#000000",
-    "#A6A6A6",
-    "#FFFFFF",
-    "#F6F1EA",
-    "#C6B2A2",
-    "#62351B",
-    "#FFBD59",
-    "#FF914D",
     "#FF3131",
     "#FF5757",
     "#FF66C4",
@@ -48,6 +40,14 @@ const colorPickerArray = [
     "#7ED957",
     "#C1FF72",
     "#FFDE59",
+    "#000000",
+    "#A6A6A6",
+    "#FFFFFF",
+    "#F6F1EA",
+    "#C6B2A2",
+    "#62351B",
+    "#FF914D",
+    "#FFBD59",
 ]
 
 // Color Elements
@@ -93,8 +93,10 @@ function handlePopulateTiles () {
     for(let i = 0; i<colorObject.colorList.length; i += 1) {
         const hex = colorObject.colorList[i]
         const currentTile = colorTilesAll[i]
+        // thumbtack creation for color tiles
         currentTile.innerHTML = `<div id="parent-${hex}" style="display:flex; align-items:center;"> <i id="icon-${hex}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${hex}</div>`
         currentTile.style.background = hex
+        currentTile.style.color = "white"
         currentTile.setAttribute("id", hex)
     }
 
@@ -104,11 +106,6 @@ function handlePopulateTiles () {
 
 // Adds event listeners to each color square
 function handleColorPicker (){
-    //colorPickerContainerEl.style.width = "21rem"
-    //colorPickerContainerEl.style.height = "16rem"
-    //colorPickerContainerEl.style.flexDirection = "row"
-    //colorPickerContainerEl.style.alignContent = "space-around"
-    // Above styling can be done in CSS
     
     for (let i = 0; i < colorPickerArray.length; i++) {
         const hex = colorPickerArray[i]
@@ -128,7 +125,6 @@ function generateColorPicker(hexCode) {
     pickerContainer.style.width = "2.5rem"
     pickerContainer.style.height = "2.5rem"
     pickerContainer.style.border = "solid 1px #d9d9d9"
-    // pickerContainer.style.margin = ".75rem" 
     return pickerContainer
 }
 
@@ -301,45 +297,54 @@ function hideLanding(){
 }
 
 function handleFavorites(e){
-    
+    // if they click on something other than the thumbtack:
     if (e.target.tagName !== "I") {
         return null
     }
+    // pulls ID off of thumbtack that is created on line 97
     const id = e.target.id
     const clickedFavorite = document.getElementById(id)
     favoritesArray = []
+    // gets any previous favorites out of local storage
     const prevFavorites = JSON.parse(localStorage.getItem("favorites"))
-    
+    // loops over previous favorites and pushes them into favorites array
     prevFavorites?.forEach((item) => {
         favoritesArray.push(item)
     })
+    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
     const favorited = prevFavorites?.find((item) => item === id)
+    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
     if (favorited) {
         clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
         favoritesArray = favoritesArray.filter((item) => item !== id)
         localStorage.setItem("favorites", JSON.stringify(favoritesArray))
+    // if not favorited does the oposite of previous if statement
     } else if (!favorited) {
         clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
         favoritesArray.push(id)
         localStorage.setItem("favorites", JSON.stringify(favoritesArray))
     }
-
+    // calls function to add any favorites to the color dropdown
     handleFavoriteColorDD()
-
 }
 
 function handleFavoriteColorDD () {
+    // empties out favorites array
     favoritesArray = []
+    // gets everything out of local storage & pushes back in
     const prevFavorites = JSON.parse(localStorage.getItem("favorites"))
     prevFavorites?.forEach((item) => {
         favoritesArray.push(item)
     })
+    // empties out saved colors
     savedColorsEl.innerHTML = ""
+    // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
     favoritesArray.forEach((item) => {
         const icon = document.getElementById(`${item}`)
         if (icon) {
             icon.setAttribute("style", "color: black; margin-right: 1rem;")
         }
+        // creates the color drop down cells and ads them to the saved colors dropdown div
         const cell = document.createElement("div")
         const hex = item.split("-")[1]
         cell.setAttribute("style", `background: ${hex}; color: black;`)
