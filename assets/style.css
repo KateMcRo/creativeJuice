@@ -12,7 +12,7 @@
 }
 
 html {
-  background-color: var(--deep-scarlet);
+  background-color: var(--daylight);
   color: black;
 }
 
@@ -193,7 +193,7 @@ header {
 
 #wordSubmit {
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   background: linear-gradient(#0BB7A2, #28e1df);
   /* background: linear-gradient(#a9bcc4, #d1e6ee); */
@@ -207,7 +207,7 @@ header {
 /* Home Button on word input tile */
 #startOver {
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 500;
   background: linear-gradient(#838383, #cacaca);
   margin: 6px 0 12px 0;
