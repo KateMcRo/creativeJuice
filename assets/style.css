@@ -76,9 +76,7 @@ header {
   padding: 0.625rem;
   width: 15rem;
   border-radius: 28px;
-  margin-top: 4.5rem;
-  margin-left: 24%;
-  margin-bottom: 2.5rem;
+  margin-top: 3.5rem;
 }
 
 
@@ -315,4 +313,17 @@ header {
   text-shadow: #ABABAB 2px 2px 2px; */
   /* border-radius: 16px; */
   /* min-height: 7rem; */
+}
+
+#quoteContainer {
+  text-align: center;
+}
+
+#quote1 {
+  font-size: xx-large;
+}
+
+#quote2 {
+  font-size: larger;
+  margin-top: 2rem;
 }

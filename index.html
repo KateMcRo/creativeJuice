@@ -34,7 +34,6 @@
 
           <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">Words</a>
-              <h1></h1>
               <div id="savedWords" class= "navbar-dropdown"></div>
           </div>
 
@@ -42,13 +41,11 @@
             <a class="navbar-link">
               Colors
             </a>
-            <h1></h1>
             <div id="savedColors" class="navbar-dropdown"></div>
           </div>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">About Us</a>
-            <h1></h1>
             <div  id="savedColors"  class="navbar-dropdown">
               <a class="navbar-item">John Elmore</a>
                 <a class="navbar-item">Maninder Manan</a>
@@ -68,8 +65,9 @@
         </div>
 
         <div id="quoteContainer">
-            <p class="mb-4 none d-md-block" id="quote1"><strong>"It's hard to start from nothing"</strong> - David Byrne (Talking Heads)</p> 
-            <p id="quote2"> When you have creative <b>block</b> or design paralysis, <br> all it takes are little <i>beginnings</i> to create your next <b>masterpiece</b></p>
+            <h1 id="quote1"><strong>"It's hard to start from nothing"</strong></h1>
+            <p>- David Byrne (Talking Heads)</p>
+            <p id="quote2"> When you have creative block or design paralysis, all it<br>takes are <i>little beginnings</i> to create your next <b>masterpiece</b></p>
             <button id="startBtn" class="button is-primary">Let's Begin!</button>
         </div>
     </div>
@@ -82,7 +80,7 @@
 
         <div id="wordInputContainer">
           <p id="wordInputHeader">Enter a Word</p>
-          <div class="tile" id="retryCard">
+          <div class="tile">
             <div class="tile is-parent is-vertical">
             <article id="inputTile" class="tile is-child notification is-primary">
               <input id="wordText" class="input is-small" type="text" placeholder="Word Input">
