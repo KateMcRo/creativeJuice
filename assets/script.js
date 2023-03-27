@@ -16,7 +16,6 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("wordSubmit");
 var span = document.getElementsByClassName("close")[0];
 
-
 // Color Elements
 const colorTilesAll = document.querySelectorAll(".colorTile")
 const colorPickerContainerEl = document.getElementById("pickerDiv")
@@ -24,10 +23,7 @@ const colorPickerArray = ["#FF3131","#FF5757","#FF66C4","#CB6CE6","#8C52FF","#5E
 let colorObjectArray = []
 
 // Word Elements
-const wordCard1 = document.getElementById("word1");
-const wordCard2 = document.getElementById("word2");
-const wordCard3 = document.getElementById("word3");
-const wordCard4 = document.getElementById("word4");
+
 const synonymGenEl = document.getElementById("wordForm")
 let synonymArray = [];
 let synArray =[];
@@ -39,7 +35,6 @@ let wordInputEl = document.getElementById("wordText");
 
 // Color API call
 async function getColorData (hexCode) {
-    // Color Variable for parameter
     const options = {
         method: 'POST',
         headers: {
@@ -64,7 +59,6 @@ function handleColorObject () {
 
 // Displays color palette results
 function handlePopulateTiles () {
-    // returns parsed version of what was in local storage
     colorObject = handleColorObject()
     colorTilesAll.innerHTML = ""
 
@@ -113,169 +107,77 @@ async function handleColorSubmit (event) {
 
 handleColorPicker();
     
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
+// Functions to Open/Close modals
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
         modal.style.display = "none";
     }
+}
     
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+// Word API call from user input
+function renderSynonyms(){
+    let wordValueEl = document.querySelector('#wordText').value;
+    
+    const getSynonyms = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': apiKey ,
+            'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
         }
-    }
+    };
     
-    // Word API call from user input
-    function renderSynonyms(){
-        let wordValueEl = document.querySelector('#wordText').value;
-        
-        const getSynonyms = {
-            method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': apiKey ,
-                'X-RapidAPI-Host': 'wordsapiv1.p.rapidapi.com'
-			}
-        };
-        
-        fetch(`https://wordsapiv1.p.rapidapi.com/words/${wordValueEl}/synonyms`, getSynonyms)
-        .then(function(response){
-            console.log(response)
-            if(response.status !== 200){
-                modal.style.display = "block";
-            } else{
-                
-                return response.json();
-            }
-            
-        })
-        .then(function(data){
-           // localStorage.setItem("data", JSON.stringify(data))
-            if(!data || !data.synonyms){
-                return;
-            }
-            if (data.synonyms.length === 0 ){
-                
-                // display modal
-                
-            }
-            console.log(data);
-            console.log(data.synonyms);
-            
-            //displayWord.innerText = wordValueEl;
-            let searchedWord = document.getElementById('searchedWord');
-            searchedWord.innerText = wordValueEl;
-            
-            
-            synonymArray = [];
-            for(let i = 0; i < data.synonyms.length; i++){
-                
-              
-                synonymArray.push(data.synonyms[i]);
-            }
-            // if(synonymArray < 4){
-                //     fourSynonyms.push(synonymArray)
-                // }
-                console.log(synonymArray)
-                let fourSynonyms = [];
-                for (let i = 0; i < 4; i++){
-                  
-                    if(synonymArray[i] !== undefined){
-                        
-                        var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
-                        
-                        if(!fourSynonyms.includes(randomWord)){
-                            
-                            fourSynonyms.push(randomWord);
-                            
-                        }
-                      
-                    }}
-                    
-                    // first call a for loop using math.floor(math.random () * array.length)
-                    // use an if statement to check for duplicates  
-        // push elements into new array
-
-        //console.log(fourSynonyms);
-    
-  //  console.log(fourSynonyms);
-    
-
-    
-        // searchedWord.innerHTML=""
-        
-        // searchedWord.innerText = wordValueEl;
-        // searchedWord.innerHTML = `<div id="parent-${searchedWord}" style="display:flex; align-items:center;"> <i id="icon-${searchedWord}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${searchedWord}</div>`
-        for(let i =1; i < 5; i++){
-        
-            let element = document.getElementById("word" + i);
-            element.innerText = fourSynonyms[i-1] || "";
-            let thumbEl = fourSynonyms[i-1];
-            element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
-            element.style.color = "white"
-            element.style.backgroundColor = "#d9d9d9"
-            element.style.textShadow = "#737373 2px 2px 2px;"
-            // currentTile.style.background = thumbEl
-            // currentTile.style.color = "white"
-            // currentTile.setAttribute("id", thumbEl)
-        }
+    fetch(`https://wordsapiv1.p.rapidapi.com/words/${wordValueEl}/synonyms`, getSynonyms)
+    .then(function(response){
+        if(response.status !== 200){
+            modal.style.display = "block";
+        } else{
+            return response.json();
+        }  
     })
+
+    .then(function(data){
+        // localStorage.setItem("data", JSON.stringify(data))
+        if(!data || !data.synonyms){
+            return;
+        }
+        if (data.synonyms.length === 0 ){ 
+            // display modal  
+        }
+        //displayWord.innerText = wordValueEl;
+        let searchedWord = document.getElementById('searchedWord');
+        searchedWord.innerHTML = `<i id="icon-${wordValueEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i> ${wordValueEl}`;
+
+        synonymArray = [];
+        for(let i = 0; i < data.synonyms.length; i++){
+            synonymArray.push(data.synonyms[i]);
+        }
+            let fourSynonyms = [];
+            for (let i = 0; i < 4; i++){
+                    var randomIndex = Math.floor(Math.random() * synonymArray.length)
+                    var randomWord = synonymArray[randomIndex];
+                    synonymArray.splice(randomIndex,1);
+                        fourSynonyms.push(randomWord);       
+            }
+                // first call a for loop using math.floor(math.random () * array.length), use an if statement to check for duplicates, push elements into new array
+
+    for(let i =1; i < 5; i++){
+        let element = document.getElementById("word" + i);
+        element.innerText = fourSynonyms[i-1] || "";
+        let thumbEl = fourSynonyms[i-1];
+        element.style.color = "white"
         
+        if(thumbEl){
+            element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
 
-    
-    // for(let i =1; i < 5; i++){
-        
-    //     let element = document.getElementById("word" + i);
-    //     element.innerText = fourSynonyms[i-1] || "";
-    //     let thumbEl = fourSynonyms[i-1];
-    //     element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
-        
-    //     currentTile.style.background = thumbEl
-    //     currentTile.style.color = "white"
-    //     currentTile.setAttribute("id", thumbEl)
-    // }
-
-    
-
-//    let savedSearches = localStorage.getItem("savedSynonyms");
-// 	if (!savedSearches){
-//         savedSearches = [];
-// }   else{
-//     // console.log(savedSearches);
-//     // console.log(typeof savedSearches);
-//     savedSearches = JSON.parse(savedSearches)
-
-
-
-
-
-}
-    
-
-
-
-	
-
-
-function retryWord(){
-
-	console.log("retry")
-
-};
-
-function restartTest () {
-    console.log("Start Over")
-    landingContainer.style.display = "flex"
-}
-
-// Show/Hide Functions
-function hideModule(element) {
-
-    return element.style.display = "none"
-}
-
-function showModule(element) {
-    // can be updated with if statements as needed
-    return element.style.display = "block"
+        } else {
+            element.innerHTML = `<div style="display:flex; align-items:center;"> </div>`
+        }  
+    }
+})
 }
 
 function hideResults(){
@@ -288,9 +190,9 @@ function hideResults(){
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "flex";
 }
+
 function hideLanding(){
     handleFavoriteColorDD()
-    
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "none";
     let inputArea = document.getElementById("inputArea");
@@ -298,8 +200,7 @@ function hideLanding(){
     let colorPick = document.getElementById("colorPick");
     colorPick.style.display = "flex";
     let resultsPage  = document.querySelector(".columns");
-    resultsPage.style.display = "flex";
-    
+    resultsPage.style.display = "flex"; 
 }
 
 function handleFavorites(e){
@@ -307,30 +208,24 @@ function handleFavorites(e){
     if (e.target.tagName !== "I") {
         return null
     }
-    // pulls ID off of thumbtack that is created on line 97
     const id = e.target.id
     const clickedFavorite = document.getElementById(id)
     favoritesArray = []
-    // gets any previous favorites out of local storage
+    // gets any previous favorites out of local storage, loops, and pushes into favorites array
     const prevFavorites = JSON.parse(localStorage.getItem("favorites"))
-    // loops over previous favorites and pushes them into favorites array
     prevFavorites?.forEach((item) => {
         favoritesArray.push(item)
     })
-    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
     const favorited = prevFavorites?.find((item) => item === id)
-    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
     if (favorited) {
         clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
         favoritesArray = favoritesArray.filter((item) => item !== id)
         localStorage.setItem("favorites", JSON.stringify(favoritesArray))
-    // if not favorited does the oposite of previous if statement
     } else if (!favorited) {
         clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
         favoritesArray.push(id)
         localStorage.setItem("favorites", JSON.stringify(favoritesArray))
     }
-    // calls function to add any favorites to the color dropdown
     handleFavoriteColorDD()
 }
 
@@ -367,18 +262,16 @@ function handleFavoriteWord(){
     console.log(prevFavorites)
     prevFavorites?.forEach((item) => {
         synArray.push(item)
-        console.log(synArray)
     })
-    // empties out saved colors
+    // empties out saved words
     savedWordsEl.innerHTML = ""
     // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
-    console.log(synArray)
     synArray.forEach((item) => {
         const icon = document.getElementById(`${item}`)
         if (icon) {
             icon.setAttribute("style", "color: black; margin-right: 1rem;")
         }
-        // creates the color drop down cells and ads them to the saved colors dropdown div
+        // creates the word drop down cells and ads them to the saved words dropdown div
         const cell = document.createElement("div")
 
         const hex = item.split("-")[1]
@@ -388,49 +281,40 @@ function handleFavoriteWord(){
     })
 }
 function wordFavorite(e){
-     // if they click on something other than the thumbtack:
      if (e.target.tagName !== "I") {
         return null
     }
-    // pulls ID off of thumbtack that is created on line 97
     const id = e.target.id
     const clickedFavorite = document.getElementById(id)
     synArray = [];
-    // gets any previous favorites out of local storage
     const prevFavoriteSyn = JSON.parse(localStorage.getItem("savedSynonyms"))
-    console.log(prevFavoriteSyn)
-    // loops over previous favorites and pushes them into favorites array
     prevFavoriteSyn?.forEach((item) => {
         synArray.push(item)
     })
-    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
     const favorited = prevFavoriteSyn?.find((item) => item === id)
-    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
     if (favorited) {
         clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
         synArray = synArray.filter((item) => item !== id)
         localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
-    // if not favorited does the oposite of previous if statement
     } else if (!favorited) {
         clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
         synArray.push(id)
         localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
     }
-    // calls function to add any favorites to the color dropdown
     handleFavoriteWord()
 }
 
 function sorter(e){
-    console.log(e.target)
     if(e.target.id.includes("#")){
         handleFavorites(e);
     } else {
         wordFavorite(e);
     }
 }
+
 hideResults();
+
 // Event Listeners
-startOverBtnEl.addEventListener("click", restartTest);
 wordSubmitBtnEl.addEventListener("click", renderSynonyms);
 startBtnEl.addEventListener("click", hideLanding);
 startOverBtnEl.addEventListener('click', hideResults);
