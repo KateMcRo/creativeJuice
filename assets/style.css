@@ -159,7 +159,7 @@ header {
 
 /* This is the tile where you input words and can also return home */
 #inputTile {
-  background-color: #B5B5B5;
+  background: #dbdbdb;
   border: solid 1px lightgrey;
   border-radius: 16px;
   max-height: 9.75rem;
@@ -284,15 +284,17 @@ header {
 }
 
 /* word tile with word search results */
-#wordTile {
-
+.wordTile {
+  background: #dbdbdb;
+  color: white;
   border-radius: 8px;
   min-height: 4.2rem;
   min-width: 15%;
   border-width: 1px;
+  text-shadow: 2px 2px 2px #ababab;
 }
 
-#wordTile p {
+.wordTile p {
   font-size: 1.25rem;
 }
 
