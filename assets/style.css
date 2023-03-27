@@ -285,7 +285,7 @@ header {
 
 /* word tile with word search results */
 #wordTile {
-  background-color: #cccccc;
+
   border-radius: 8px;
   min-height: 4.2rem;
   min-width: 15%;
