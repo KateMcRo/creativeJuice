@@ -8,9 +8,10 @@ Users input their starting color choice and a word. The app returns a 5 color pa
 
 We wanted to make a practical application to help ignite creativity. This application offers a simple way to overcome a lack of inspiration.
 
-In the process of building this, we learned many lessons:
-- The importance of branch management
-- 
+In the process of building this, we learned many lessons which included the importance of:
+- Branch management
+- Coordinating the linking of all portions of the code
+- Troubleshooting problems/pivoting as a team
 
 ## User Story
 
