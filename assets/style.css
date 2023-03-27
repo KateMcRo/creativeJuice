@@ -1,21 +1,13 @@
 /* CSS styling elements go here */
 :root {
-  /* all unused variables will be deleted from final build */
   --daylight: #fcfcff;
-  /* deep scarlet is for de-bugging */
-  --deep-scarlet: #e80040;
-  --aluminum: #d8d8d8;
-  /* --primary-green: #00d1b2; */
-  /* --soft-white: #fcfdf4; */
-  /* --lime: #5af7a2; */
-
 }
 
 html {
   background-color: var(--daylight);
-  color: black;
 }
 
+/* _maybe_ delete from final */
 .hidden {
   visibility: hidden;
 }
@@ -30,36 +22,40 @@ header {
 }
 
 
+/* navigation bar section */
 .navbar {
   background: linear-gradient(#8a8a8a, #cccccc);
-  color: black;
   font-size: 1.2rem;
   font-weight: 500;
-  max-height: 5rem;
 }
 
-.navbar-item {
+
+/* probably delete */
+/* .navbar-item {
   display: wrap;
   flex-wrap: wrap;
   background: transparent;
   max-width: fit-content;
-}
+} */
 
-.navbar-link {
+/* .navbar-link {
   display: flex;
   background: linear-gradient(#8a8a8a, #cccccc);
-}
+} */
 
-#navbarBasicExample
+
+/* probably delete */
+/* #navbarBasicExample
 {
   background: linear-gradient(#8a8a8a, #cccccc);
-}
+} */
 
-.navbar-dropdown a {
+/* .navbar-dropdown a {
   background: linear-gradient (white, white);
   font-weight: 500;
-}
+} */
 
+/* landing page button to start things off */
 #landingContainer {
   display: flex;
   flex-direction: row;
@@ -67,34 +63,26 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--daylight);
+  /* background-color: var(--daylight);
   border: none;
-  margin: 0.75rem;
+  margin: 0.75rem; */
 }
 
-/* landing page button to start things off */
 #startBtn {
-  justify-content: center;
-  color: white;
   font-size: 1.6rem;
-  font-weight: 600;
-  justify-content: center;
+  font-weight: 500;
+  background: linear-gradient(#0BB7A2, #28e1df);
+  margin: 6px 4px 12px 0;
   padding: 0.625rem;
   width: 15rem;
-  border: solid 1px lightgrey;
-  border-radius: 8px;
+  border-radius: 28px;
   margin-top: 4.5rem;
   margin-left: 24%;
   margin-bottom: 2.5rem;
 }
 
-/* ID not currently used, may be in the future. If not, delete before final build */
-#colorWordPage {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-/* Can be applied to selected color to make it visually obvious it's been clicked */
+/* Can be applied to selected color to make it visually obvious it's been clicked. May delete from final build */
 .selectedColor {
   border-color: black;
   border: dashed;
@@ -103,10 +91,11 @@ header {
 }
 
 
-#colorPick {
+/* probably will delete */
+/* #colorPick {
   display: flex;
   align-content: space-around;
-}
+} */
 
 /* Title above color selection area */
 #colorName {
@@ -143,13 +132,6 @@ header {
   font-weight: 500;
 }
 
-/* #retryCard {
-  display: flex;
-  flex-wrap: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
 /* this container is for both the color palette and the word tile */
 #inputArea {
   display: flex;
@@ -177,7 +159,7 @@ header {
 
 /* This is the tile where you input words and can also return home */
 #inputTile {
-  background: linear-gradient(#8a8a8a, #e2e2e2);
+  background-color: #B5B5B5;
   border: solid 1px lightgrey;
   border-radius: 16px;
   max-height: 9.75rem;
@@ -185,8 +167,6 @@ header {
 
 #submitHomeBtns {
   display: flex;
-  flex: wrap;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -196,7 +176,6 @@ header {
   font-size: 1.2rem;
   font-weight: 500;
   background: linear-gradient(#0BB7A2, #28e1df);
-  /* background: linear-gradient(#a9bcc4, #d1e6ee); */
   margin: 6px 4px 12px 0;
   padding: 4px;
   border-radius: 16px;
@@ -209,7 +188,7 @@ header {
   color: white;
   font-size: 1.2rem;
   font-weight: 500;
-  background: linear-gradient(#838383, #cacaca);
+  background: linear-gradient(#838383, #b9b9b9);
   margin: 6px 0 12px 0;
   padding: 4px;
   border-radius: 16px;
@@ -278,30 +257,23 @@ header {
   cursor: pointer;
 }
 
-.bulma-fa-mixin {
+/* probably delete from final build */
+/* .bulma-fa-mixin {
   background-color: transparent;
-}
+} */
 
 
-/* results tiles */
+/* results tiles section */
+
 .columns {
   justify-content: center;
 }
 
-/* .colorTile {
-  display: flex;
-  flex-wrap: wrap;
-  text-shadow: #ABABAB 2px 2px 2px;
-  background: linear-gradient(to left, #E0E0E0,#d1d1d1);
-  color: black;
-  font-size: 1.25rem;
-  min-height: 7rem;
-  border-radius: 16px;
-} */
 
-.colorTile p {
+/* delete from final build */
+/* .colorTile p {
   font-size: 1.25rem;
-}
+} */
 
 .column1,
 .column2,
@@ -311,11 +283,9 @@ header {
   width: 18%;
 }
 
-/* word tile with synonym search results */
+/* word tile with word search results */
 #wordTile {
-  background: linear-gradient(to right, #faf7ee,#e2d1b1);
-  border: solid;
-  border-color: #DAD7D2;
+  background-color: #cccccc;
   border-radius: 8px;
   min-height: 4.2rem;
   min-width: 15%;
@@ -336,8 +306,11 @@ header {
 #color4 {
   display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(to left, #E0E0E0,#d1d1d1);
-  text-shadow: #ABABAB 2px 2px 2px;
-  border-radius: 16px;
-  min-height: 7rem;
+  background: transparent;
+  color: #dddddd;
+  border: 1px #dddddd solid;
+  /* background: linear-gradient(to left, #E0E0E0,#d1d1d1);
+  text-shadow: #ABABAB 2px 2px 2px; */
+  /* border-radius: 16px; */
+  /* min-height: 7rem; */
 }
