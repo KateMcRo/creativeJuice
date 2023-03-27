@@ -7,7 +7,7 @@ html {
   background-color: var(--daylight);
 }
 
-/* _maybe_ delete from final */
+/* allows desired elements to start out hidden */
 .hidden {
   visibility: hidden;
 }
@@ -21,39 +21,12 @@ header {
   text-align: inherit;
 }
 
-
-/* navigation bar section */
+/* navigation bar */
 .navbar {
   background: linear-gradient(#8a8a8a, #cccccc);
   font-size: 1.2rem;
   font-weight: 500;
 }
-
-
-/* probably delete */
-/* .navbar-item {
-  display: wrap;
-  flex-wrap: wrap;
-  background: transparent;
-  max-width: fit-content;
-} */
-
-/* .navbar-link {
-  display: flex;
-  background: linear-gradient(#8a8a8a, #cccccc);
-} */
-
-
-/* probably delete */
-/* #navbarBasicExample
-{
-  background: linear-gradient(#8a8a8a, #cccccc);
-} */
-
-/* .navbar-dropdown a {
-  background: linear-gradient (white, white);
-  font-weight: 500;
-} */
 
 /* landing page button to start things off */
 #landingContainer {
@@ -68,6 +41,7 @@ header {
   margin: 0.75rem; */
 }
 
+/* start button on the landing page */
 #startBtn {
   font-size: 1.6rem;
   font-weight: 500;
@@ -79,7 +53,6 @@ header {
   margin-top: 3.5rem;
 }
 
-
 /* Can be applied to selected color to make it visually obvious it's been clicked. May delete from final build */
 .selectedColor {
   border-color: black;
@@ -87,13 +60,6 @@ header {
   padding: 2px;
   border-width: 3px;
 }
-
-
-/* probably will delete */
-/* #colorPick {
-  display: flex;
-  align-content: space-around;
-} */
 
 /* Title above color selection area */
 #colorName {
@@ -114,6 +80,7 @@ header {
   margin: 0.25rem 0 1.25rem 0;
 }
 
+/* class for the dynamically generated color palette boxes */
 .pickBox {
   height: 2.5rem;
   width: 2.5rem;
@@ -150,25 +117,26 @@ header {
   flex-direction: row;
 }
 
-
+/* larger container for inputTile and the text above it, as a column */
 #wordInputContainer {
   width: 35%;
 }
 
 /* This is the tile where you input words and can also return home */
 #inputTile {
-  background: #dbdbdb;
+  background: #bdbdbd;
   border: solid 1px lightgrey;
   border-radius: 16px;
   max-height: 9.75rem;
 }
 
+/* area for the two buttons on the inputTile */
 #submitHomeBtns {
   display: flex;
   justify-content: space-evenly;
 }
 
-
+/* Submit button on the word input tile */
 #wordSubmit {
   color: white;
   font-size: 1.2rem;
@@ -255,23 +223,10 @@ header {
   cursor: pointer;
 }
 
-/* probably delete from final build */
-/* .bulma-fa-mixin {
-  background-color: transparent;
-} */
-
-
 /* results tiles section */
-
 .columns {
   justify-content: center;
 }
-
-
-/* delete from final build */
-/* .colorTile p {
-  font-size: 1.25rem;
-} */
 
 .column1,
 .column2,
@@ -283,7 +238,7 @@ header {
 
 /* word tile with word search results */
 .wordTile {
-  background: #dbdbdb;
+  background: #bdbdbd;
   color: white;
   border-radius: 8px;
   min-height: 4.2rem;
@@ -309,12 +264,9 @@ header {
   background: transparent;
   color: #dddddd;
   border: 1px #dddddd solid;
-  /* background: linear-gradient(to left, #E0E0E0,#d1d1d1);
-  text-shadow: #ABABAB 2px 2px 2px; */
-  /* border-radius: 16px; */
-  /* min-height: 7rem; */
 }
 
+/* Container for both quotes on landing page */
 #quoteContainer {
   text-align: center;
 }
