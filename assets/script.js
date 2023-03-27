@@ -159,6 +159,7 @@ function handlePopulateTiles () {
         currentTile.innerHTML = `<div id="parent-${hex}" style="display:flex; align-items:center;"> <i id="icon-${hex}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${hex}</div>`
         currentTile.style.background = hex
         currentTile.style.color = "white"
+        currentTile.style.textShadow = "#737373 2px 2px 2px"
         currentTile.setAttribute("id", hex)
     }
 
@@ -306,7 +307,7 @@ var span = document.getElementsByClassName("close")[0];
             let thumbEl = fourSynonyms[i-1];
             element.style.color = "white"
            // element.style.backgroundColor = "#d9d9d9"
-           // element.style.textShadow = "#ABABAB 2px 2px 2px;"
+           // element.style.textShadow = "#737373 2px 2px 2px;"
            // element.style.borderRadius = "16px"
            // element.style.minHeight = "7rem"
             //element.style = "text-shadow: #ABABAB 2px 2px 2px";
