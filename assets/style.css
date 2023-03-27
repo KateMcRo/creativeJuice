@@ -1,10 +1,6 @@
 /* CSS styling elements go here */
-:root {
-  --daylight: #fcfcff;
-}
-
 html {
-  background-color: var(--daylight);
+  background-color: #fcfcff;
 }
 
 /* allows desired elements to start out hidden */
@@ -13,7 +9,7 @@ html {
 }
 
 body {
-  background-color: var(--daylight);
+  background-color: #fcfcff;
 }
 
 /* navigation bar */
@@ -27,13 +23,9 @@ body {
 #landingContainer {
   display: flex;
   flex-direction: row;
-  /* the line below is needed */
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: var(--daylight);
-  border: none;
-  margin: 0.75rem; */
 }
 
 /* start button on the landing page */
@@ -190,7 +182,6 @@ body {
 
 /* Modal Content  */
 .modal-content {
-
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -239,17 +230,10 @@ body {
 }
 
 .wordTile p {
-  font-size: 1.25rem;
+  font-size: 16px;
 }
 
-
-/* likely to be compressed to one ID */
-#colorTiles,
-#color0,
-#color1,
-#color2,
-#color3,
-#color4 {
+.colorTile {
   display: flex;
   flex-wrap: wrap;
   background: transparent;
@@ -269,4 +253,23 @@ body {
 #quote2 {
   font-size: larger;
   margin-top: 2rem;
+}
+
+/*** Mobile CSS ***/
+@media screen and (max-width: 768px){
+  .columnSingle {
+    width: 100%;
+  }
+
+  #content-grid {
+    flex-direction: column;
+  }
+
+  #inputArea {
+    flex-direction: column;
+  }
+
+  #wordInputContainer {
+    width: 100%;
+  }
 }
