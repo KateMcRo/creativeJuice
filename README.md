@@ -1,145 +1,64 @@
-# 07 Project 1: Interactive Front-End Application
-
-Project Description
-Project 1 
-
-We created a creative writing app that will assist the user with a variety of ideas and color palettes that will coincide with there chosen keyword. For example, the user can type in any keyword which will then allow the app to generate a set amount of suggestions and color options to coincide with their keyword. We feel that an app of this capacity could expand the idea base of a user experiencing writers block.
-
-
-## Your Task
-At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
-
-A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
-
-Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
-
-Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
+# Creative Juice
 
 ## Description
-CreativeJuices will be a site to help anybody when they find themselves in an artistic block. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai. The site will take any word you input, and produce an array of synonoms which are meant to help break the writers block you may have. The AIColorGenerator will generate . This web app is meant to get the creative juices flowing! 
 
-## User Story 
-AS A artist or wrtier with creative block
-I want a site that will generate words and colors
-SO that I can feel inspired to create something new
+This is an interactive front-end application that helps people break out of creative blocks. The website utilizes the WordAPI provided thorugh the RapidAPI site, as well as, the AIColorGenerator by Hotpot.ai.
 
-## Acceptance Criteria
-GIVEN we have a dashboard and it has a get started button
-WHEN you click the get started button
-THEN you will have a modal to input a selection for color and word choices
-WHEN the user confirms their choices
-THEN the results are displayed in cards alternating between the words and colors
-WHEN the user is finished with this list
-THEN they can click try again (Buttons displayed at the top)
+Users input their starting color choice and a word. The app returns a 5 color palette and a selection of synonyms. If the user isn't satisfied with these options they can retry either input independently. Once they have elements that inspire them, they can save them to the "favorites" dropdowns.
 
-## Project Requirements
-You and your group will use everything you’ve learned over the past six modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+We wanted to make a practical application to help ignite creativity. This application offers a simple way to overcome a lack of inspiration.
 
-* Use a CSS framework other than Bootstrap.
+In the process of building this, we learned many lessons:
+- The importance of branch management
+- 
 
-* Be deployed to GitHub Pages.
+## User Story
 
-* Be interactive (i.e., accept and respond to user input).
+AS an artist or writer with creative block<br>
+I WANT a site that will generate words and colors<br>
+SO THAT I can feel inspired to create something new
+## Usage
 
-* Use at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+Click "Let's Begin!" to view the input options.
 
-* Does not use alerts, confirms, or prompts (use modals).
+![Screenshot of Landing Page](assets/images/CJ%20Landing.png)
 
-* Use client-side storage to store persistent data.
+Select a color and enter a word. Press Submit to find synonyms.<br><br>
+You can resubmit any part of the form to populate new options.<br><br>
+Click on the thumbtack icon to save or remove an option to favorites dropdown. The icon color changes to indicate if it has been saved.
 
-* Be responsive.
+![Screenshot of Inputs and Results Page](assets/images/CJ%20Submit.png)
 
-* Have a polished UI.
+[Live Deployed Creative Juice](https://katemcro.github.io/creativeJuice/)
 
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+## Credits
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+- [John Elmore](https://github.com/Letmego1st) 
+- [Maninder Manan](https://github.com/ManinderManan)
+- [Daniel McKay](https://github.com/DanielFMcKay)
+- [Paul Mendoza](https://github.com/pvmend)
+- [Kate Rogers](https://github.com/KateMcRo)
 
-## Presentation Requirements
+## License
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+MIT License
 
-* Elevator pitch: a one minute description of your application
+Copyright (c) 2023 Kate Rogers
 
-* Concept: What is your user story? What was your motivation for development?
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Demo: Show your stuff!
-
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
-
-  * Application uses client-side storage to store persistent data.
-
-  * Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
-
-  * Application uses a CSS framework other than Bootstrap.
-
-  * Application is interactive (accepts and responds to user input)
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Front-End Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
