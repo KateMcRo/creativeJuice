@@ -1,25 +1,13 @@
 /* CSS styling elements go here */
 :root {
   --daylight: #fcfcff;
-  /* deep scarlet is for de-bugging */
-  --deep-scarlet: #e80040;
-  --aluminum: #d8d8d8;
-  /* --primary-green: #00d1b2; */
-  /* --soft-white: #fcfdf4; */
-  /* --straw: #e0e0e0; *
-  /* --slate-blue: #a9b3cc; */
-  /* --orange-smoothie: #ffccae; */
-  /* --lavender: #e0e0e0; */
-  /* --lime: #5af7a2; */
-  /* --coral: #fbbdbd; */
-
 }
 
 html {
   background-color: var(--daylight);
-  color: black;
 }
 
+/* _maybe_ delete from final */
 .hidden {
   visibility: hidden;
 }
@@ -33,83 +21,41 @@ header {
   text-align: inherit;
 }
 
-/* we likely own't even need this */
-header h1 {
-  color: black;
-  font-size: 4.2rem;
-  font-weight: 400;
-}
 
-#wordForm {
-  font-size: 1.6rem;
-  font-weight: 600;
-  width: 35%;
-  margin: 0.25rem 0.75rem;
-}
-
-#wordForm input {
-  font-size: 1.2rem;
-  border-color: lightgrey;
-  border-radius: 8px;
-}
-
-#pickerDiv {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  margin: 0 1.5rem 1.5rem 0;
-  max-width: 30rem;
-  height: 10.75rem;
-  margin-top: 0.25rem;
-}
-
-.pickBox {
-  height: 2.5rem;
-  width: 2.5rem;
-  border: 1px solid rgb(215, 215, 215);
-  margin: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
+/* navigation bar section */
 .navbar {
   background: linear-gradient(#8a8a8a, #cccccc);
-  color: black;
   font-size: 1.2rem;
   font-weight: 500;
-  max-height: 5rem;
 }
 
-.navbar-item {
+
+/* probably delete */
+/* .navbar-item {
   display: wrap;
   flex-wrap: wrap;
   background: transparent;
   max-width: fit-content;
-}
+} */
 
-.navbar-link {
+/* .navbar-link {
   display: flex;
-  /* flex-wrap: wrap; */
   background: linear-gradient(#8a8a8a, #cccccc);
-}
+} */
 
-#navbarBasicExample,
-.navbar-burgar,
-.navbar-brand
+
+/* probably delete */
+/* #navbarBasicExample
 {
   background: linear-gradient(#8a8a8a, #cccccc);
-}
+} */
 
-.navbar-dropdown, .navbar-dropdown a {
+/* .navbar-dropdown a {
   background: linear-gradient (white, white);
   font-weight: 500;
-}
+} */
 
-
-.navbar-end {
-  background: transparent;
-  /* background: linear-gradient(#8a8a8a, #cccccc); */
-}
-
+/* landing page button to start things off */
 #landingContainer {
   display: flex;
   flex-direction: row;
@@ -117,56 +63,26 @@ header h1 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  background-color: var(--daylight);
+  /* background-color: var(--daylight);
   border: none;
-  margin: 0.75rem;
-}
-
-.pictureContainer {
-  margin: 0.75rem;
-  display: flex;
-  /* flex-wrap: wrap; */
-  border-radius: 20px;
-}
-
-.quoteContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  font-size: 1.2rem;
-  border-color: lightgrey;
-}
-
-#quote1,
-#quote2 {
-  margin: 0.75rem;
-  max-width: 40rem;
+  margin: 0.75rem; */
 }
 
 #startBtn {
-  /* flex-wrap: wrap; */
-  justify-content: center;
-  color: white;
   font-size: 1.6rem;
-  font-weight: 600;
-  justify-content: center;
+  font-weight: 500;
+  background: linear-gradient(#0BB7A2, #28e1df);
+  margin: 6px 4px 12px 0;
   padding: 0.625rem;
   width: 15rem;
-  border: solid 1px lightgrey;
-  border-radius: 8px;
+  border-radius: 28px;
   margin-top: 4.5rem;
   margin-left: 24%;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-/* ID not currently used, may be in the future. If not, delete before final build */
-#colorWordPage {
-  display: flex;
-  flex-wrap: wrap;
-}
 
+/* Can be applied to selected color to make it visually obvious it's been clicked. May delete from final build */
 .selectedColor {
   border-color: black;
   border: dashed;
@@ -174,48 +90,54 @@ header h1 {
   border-width: 3px;
 }
 
+
+/* probably will delete */
+/* #colorPick {
+  display: flex;
+  align-content: space-around;
+} */
+
+/* Title above color selection area */
 #colorName {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  margin: 0.25rem 0.75rem;
+  margin: 0.4rem;
   font-size: 1.625rem;
   font-weight: 500;
-}
+}  
 
-#colorPick {
+/* this is the generated color palette area */
+#pickerDiv {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-around;
+  max-width: 30rem;
+  height: 10.75rem;
+  margin: 0.25rem 0 1.25rem 0;
 }
 
+.pickBox {
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid #D7D7D7;
+  margin: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Title above word input a */
 #wordInputHeader {
-  /* display: flex;
-  flex-wrap: wrap; */
   text-align: center;
-  margin: 0.25rem 0.75rem;
+  margin: 0.25rem;
   font-size: 1.625rem;
   font-weight: 500;
 }
 
-#retryCard {
-  display: flex;
-  flex-wrap: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
+/* this container is for both the color palette and the word tile */
 #inputArea {
   display: flex;
-  flex: wrap;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
-  flex-direction: row;
   justify-content: center;
-  min-height: fit-content;
 }
 
 #inputArea div {
@@ -227,31 +149,33 @@ header h1 {
 
 #inputArea div div {
   direction: flex;
-  flex: wrap;
   flex-direction: row;
-  max-width: 30rem;
 }
 
-/* wordCard (delete comment before final build) */
-#inputArea div div article {
-  background: linear-gradient(#8a8a8a, #e2e2e2);
-  width: 24rem;
+
+#wordInputContainer {
+  width: 35%;
+}
+
+/* This is the tile where you input words and can also return home */
+#inputTile {
+  background-color: #B5B5B5;
   border: solid 1px lightgrey;
   border-radius: 16px;
+  max-height: 9.75rem;
 }
 
 #submitHomeBtns {
   display: flex;
-  flex: wrap;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
+
 #wordSubmit {
-  color: black;
-  font-size: 1.25rem;
+  color: white;
+  font-size: 1.2rem;
   font-weight: 500;
-  background: linear-gradient(#a9bcc4, #d1e6ee);
+  background: linear-gradient(#0BB7A2, #28e1df);
   margin: 6px 4px 12px 0;
   padding: 4px;
   border-radius: 16px;
@@ -259,31 +183,25 @@ header h1 {
   width: 8rem;
 }
 
+/* Home Button on word input tile */
 #startOver {
-  text-align: center;
-  font-size: 1.25rem;
+  color: white;
+  font-size: 1.2rem;
   font-weight: 500;
-  color: black;
-  background: linear-gradient(#838383, #cacaca);
+  background: linear-gradient(#838383, #b9b9b9);
   margin: 6px 0 12px 0;
   padding: 4px;
   border-radius: 16px;
   width: 8rem;
 }
 
+/* entry field to type words into */
 #wordText {
-  background-image: none;
   font-size: 1.2rem;
   margin-top: 0.2rem;
   margin-bottom: 0.6rem;
+  border-radius: 4px;
 }
-
-#retryCard {
-  max-width: 35%;
-  max-height: 12rem;
-
-}
-
 
 /* The Modal (background) */
 .modal {
@@ -339,46 +257,23 @@ header h1 {
   cursor: pointer;
 }
 
-/* results tiles */
+/* probably delete from final build */
+/* .bulma-fa-mixin {
+  background-color: transparent;
+} */
+
+
+/* results tiles section */
 
 .columns {
-  display: flex;
-  flex-wrap: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
-.column1 {
-  margin-left: 0.75rem;
-}
 
-.column5 {
-  margin-right: 0.75rem;
-}
-
-#searchedWord,
-#word1,
-#word2,
-#word3,
-#word4 {
-  font-size: 1.5rem;
-  color: black;
-}
-
-.colorTile {
-  display: flex;
-  flex-wrap: wrap;
-  text-shadow: rgb(172, 171, 171) 2px 2px 2px;
-  color: black;
+/* delete from final build */
+/* .colorTile p {
   font-size: 1.25rem;
-  min-height: 7rem;
-  border-radius: 16px;
-  height: fit-content;
-}
-
-.colorTile p {
-  font-size: 1.5rem;
-}
+} */
 
 .column1,
 .column2,
@@ -388,45 +283,34 @@ header h1 {
   width: 18%;
 }
 
-
-
-
-
-/* .column1 div div article,
-.column2 div div div article,
-.column3 div div article,
-.column4 div div article,
-.column5 div div article  */
-
+/* word tile with word search results */
 #wordTile {
-  /* display: flex;
-  flex-wrap: wrap; */
-  background-color: #F4ECE1;
-  /* background: linear-gradient(to right, #faf7ee,#e2d1b1); */
-  border: solid;
-  border-color: #DAD7D2;
+
   border-radius: 8px;
-  height: fit-content;
-  min-height: 4.2rem, fit-content;
+  min-height: 4.2rem;
   min-width: 15%;
   border-width: 1px;
 }
 
+#wordTile p {
+  font-size: 1.25rem;
+}
+
+
+/* likely to be compressed to one ID */
+#colorTiles,
 #color0,
 #color1,
 #color2,
 #color3,
 #color4 {
+  display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(to left, #E0E0E0,#d1d1d1);
-  border-radius: 16px;
-  border: none;
-  min-height: 7rem;
-}
-
-
-/* ---------------leave-this-divider-plz----------------- */
-
-.bulma-fa-mixin {
-  background-color: transparent;
+  background: transparent;
+  color: #dddddd;
+  border: 1px #dddddd solid;
+  /* background: linear-gradient(to left, #E0E0E0,#d1d1d1);
+  text-shadow: #ABABAB 2px 2px 2px; */
+  /* border-radius: 16px; */
+  /* min-height: 7rem; */
 }
