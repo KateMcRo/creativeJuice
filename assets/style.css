@@ -71,7 +71,7 @@ header {
   font-weight: 500;
 }  
 
-/* this is the generated color palette area */
+/* this is for the color palette */
 #pickerDiv {
   display: flex;
   flex-wrap: wrap;
@@ -80,7 +80,7 @@ header {
   margin: 0.25rem 0 1.25rem 0;
 }
 
-/* class for the dynamically generated color palette boxes */
+/* class for the color palette boxes */
 .pickBox {
   height: 2.5rem;
   width: 2.5rem;
@@ -228,11 +228,7 @@ header {
   justify-content: center;
 }
 
-.column1,
-.column2,
-.column3,
-.column4,
-.column5 {
+.columnSingle {
   width: 18%;
 }
 
