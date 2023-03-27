@@ -402,7 +402,7 @@ header h1 {
   /* display: flex;
   flex-wrap: wrap; */
   background-color: #F4ECE1;
-  background: linear-gradient(to right, #faf7ee,#e2d1b1);
+  /* background: linear-gradient(to right, #faf7ee,#e2d1b1); */
   border: solid;
   border-color: #DAD7D2;
   border-radius: 8px;

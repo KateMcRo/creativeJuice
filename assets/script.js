@@ -18,6 +18,67 @@ let synonymArray = [];
 let favoritesArray = []
 let synArray =[];
 
+function handleFavoriteWord(){
+    // empties out favorites array
+    synArray = []
+    // gets everything out of local storage & pushes back in
+    const prevFavorites = JSON.parse(localStorage.getItem("savedSynonyms"))
+    console.log(prevFavorites)
+    prevFavorites?.forEach((item) => {
+        synArray.push(item)
+        console.log(synArray)
+    })
+    // empties out saved colors
+    savedWordsEl.innerHTML = ""
+    // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
+    console.log(synArray)
+    synArray.forEach((item) => {
+        const icon = document.getElementById(`${item}`)
+        if (icon) {
+            icon.setAttribute("style", "color: black; margin-right: 1rem;")
+        }
+        // creates the color drop down cells and ads them to the saved colors dropdown div
+        const cell = document.createElement("div")
+
+        const hex = item.split("-")[1]
+        cell.setAttribute("style", `background: ${hex}; color: black;`)
+        cell.innerText = hex
+        savedWordsEl.append(cell)
+    })
+}
+function wordFavorite(e){
+     // if they click on something other than the thumbtack:
+     if (e.target.tagName !== "I") {
+        return null
+    }
+    // pulls ID off of thumbtack that is created on line 97
+    const id = e.target.id
+    const clickedFavorite = document.getElementById(id)
+    synArray = [];
+    // gets any previous favorites out of local storage
+    const prevFavoriteSyn = JSON.parse(localStorage.getItem("savedSynonyms"))
+    console.log(prevFavoriteSyn)
+    // loops over previous favorites and pushes them into favorites array
+    prevFavoriteSyn?.forEach((item) => {
+        synArray.push(item)
+    })
+    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
+    const favorited = prevFavoriteSyn?.find((item) => item === id)
+    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
+    if (favorited) {
+        clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
+        synArray = synArray.filter((item) => item !== id)
+        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
+    // if not favorited does the oposite of previous if statement
+    } else if (!favorited) {
+        clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
+        synArray.push(id)
+        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
+    }
+    // calls function to add any favorites to the color dropdown
+    handleFavoriteWord()
+}
+
 
 
 // API Keys (key is the same for both APIs)
@@ -230,14 +291,14 @@ var span = document.getElementsByClassName("close")[0];
                             
                         }
                       
-                    }
+                    }}
                     
                     // first call a for loop using math.floor(math.random () * array.length)
                     // use an if statement to check for duplicates  
         // push elements into new array
 
         //console.log(fourSynonyms);
-    }
+    
   //  console.log(fourSynonyms);
     
 
@@ -252,11 +313,14 @@ var span = document.getElementsByClassName("close")[0];
             element.innerText = fourSynonyms[i-1] || "";
             let thumbEl = fourSynonyms[i-1];
             element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
-            
+            element.style.color = "white"
+            element.style.backgroundColor = "#d9d9d9"
+            element.style.textShadow = "#ABABAB 2px 2px 2px;"
             // currentTile.style.background = thumbEl
             // currentTile.style.color = "white"
             // currentTile.setAttribute("id", thumbEl)
         }
+    })
         
 
     
@@ -282,78 +346,15 @@ var span = document.getElementsByClassName("close")[0];
 //     // console.log(typeof savedSearches);
 //     savedSearches = JSON.parse(savedSearches)
 
-function synonymFavorites(e){
-    // if they click on something other than the thumbtack:
-    if (e.target.tagName !== "I") {
-        return null
-    }
-    // pulls ID off of thumbtack that is created on line 97
-    const id = e.target.id
-    const clickedFavorite = document.getElementById(id)
-    synArray = [];
-    // gets any previous favorites out of local storage
-    const prevFavoriteSyn = JSON.parse(localStorage.getItem("savedSynonyms"))
-    console.log(prevFavoriteSyn)
-    // loops over previous favorites and pushes them into favorites array
-    prevFavoriteSyn?.forEach((item) => {
-        synArray.push(item)
-    })
-    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
-    const favorited = prevFavoriteSyn?.find((item) => item === id)
-    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
-    if (favorited) {
-        clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
-        synArray = synArray.filter((item) => item !== id)
-        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
-    // if not favorited does the oposite of previous if statement
-    } else if (!favorited) {
-        clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
-        synArray.push(id)
-        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
-    }
-    // calls function to add any favorites to the color dropdown
-    handleFavoriteWord()
+
+
+
+
 }
-
-function handleFavoriteWord () {
-    // empties out favorites array
-    synArray = []
-    // gets everything out of local storage & pushes back in
-    const prevFavorites = JSON.parse(localStorage.getItem("savedSynonyms"))
-    console.log(prevFavorites)
-    prevFavorites?.forEach((item) => {
-        synArray.push(item)
-        console.log(synArray)
-    })
-    // empties out saved colors
-    savedWordsEl.innerHTML = ""
-    // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
-    console.log(synArray)
-    synArray.forEach((item) => {
-        const icon = document.getElementById(`${item}`)
-        if (icon) {
-            icon.setAttribute("style", "color: black; margin-right: 1rem;")
-        }
-        // creates the color drop down cells and ads them to the saved colors dropdown div
-        const cell = document.createElement("div")
-
-        const hex = item.split("")
-        cell.setAttribute("style", `background: ${hex}; color: black;`)
-        cell.innerText = hex
-        savedWordsEl.append(cell)
-    })
-}
-
-
-
-
-
-
-	})
     
 
 
-}
+
 	
 
 
@@ -459,15 +460,22 @@ function handleFavoriteColorDD () {
         savedColorsEl.append(cell)
     })
 }
-
+function sorter(e){
+    console.log(e.target)
+    if(e.target.id.includes("#")){
+        handleFavorites(e);
+    } else {
+        wordFavorite(e);
+    }
+}
 hideResults();
 // Event Listeners
 startOverBtnEl.addEventListener("click", restartTest);
 wordSubmitBtnEl.addEventListener("click", renderSynonyms);
 startBtnEl.addEventListener("click", hideLanding);
 startOverBtnEl.addEventListener('click', hideResults);
-contentGrid.addEventListener("click", (e) => handleFavorites(e))
-contentGrid.addEventListener("click", (e) => synonymFavorites(e));
+contentGrid.addEventListener("click", (e) => sorter(e))
+
 
 
 // this will need to be moved to the end of the word input
