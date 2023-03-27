@@ -6,7 +6,7 @@ const startBtnEl = document.getElementById("startBtn");
 // container elements
 const contentGrid = document.getElementById("content-grid") // targeted entire results grid & added an event listener
 const savedColorsEl = document.getElementById("savedColors")
-
+const savedWordsEl = document.getElementById("savedWords");
 
 // Word Elements
 const wordCard1 = document.getElementById("word1");
@@ -16,6 +16,7 @@ const wordCard4 = document.getElementById("word4");
 const synonymGenEl = document.getElementById("wordForm")
 let synonymArray = [];
 let favoritesArray = []
+let synArray =[];
 
 
 
@@ -183,11 +184,13 @@ var span = document.getElementsByClassName("close")[0];
             if(response.status !== 200){
                 modal.style.display = "block";
             } else{
+                
                 return response.json();
             }
             
         })
         .then(function(data){
+           // localStorage.setItem("data", JSON.stringify(data))
             if(!data || !data.synonyms){
                 return;
             }
@@ -203,10 +206,11 @@ var span = document.getElementsByClassName("close")[0];
             let searchedWord = document.getElementById('searchedWord');
             searchedWord.innerText = wordValueEl;
             
+            
             synonymArray = [];
             for(let i = 0; i < data.synonyms.length; i++){
                 
-                //console.log(data.synonyms[i])
+              
                 synonymArray.push(data.synonyms[i]);
             }
             // if(synonymArray < 4){
@@ -215,16 +219,13 @@ var span = document.getElementsByClassName("close")[0];
                 console.log(synonymArray)
                 let fourSynonyms = [];
                 for (let i = 0; i < 4; i++){
-                    console.log(i)
-                    console.log(synonymArray[i])
+                  
                     if(synonymArray[i] !== undefined){
                         
                         var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
-                        //  console.log(!fourSynonyms.includes(randomWord))
+                        
                         if(!fourSynonyms.includes(randomWord)){
-                            // console.log(true)  
-                            //  console.log(randomWord)
-                            // console.log(fourSynonyms);
+                            
                             fourSynonyms.push(randomWord);
                             
                         }
@@ -239,14 +240,119 @@ var span = document.getElementsByClassName("close")[0];
     }
   //  console.log(fourSynonyms);
     
-    for(let i =1; i < 5; i++){
-    
-        let element = document.getElementById("word" + i);
-        element.innerText = fourSynonyms[i-1] || "";
 
+    
+        // searchedWord.innerHTML=""
+        
+        // searchedWord.innerText = wordValueEl;
+        // searchedWord.innerHTML = `<div id="parent-${searchedWord}" style="display:flex; align-items:center;"> <i id="icon-${searchedWord}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${searchedWord}</div>`
+        for(let i =1; i < 5; i++){
+        
+            let element = document.getElementById("word" + i);
+            element.innerText = fourSynonyms[i-1] || "";
+            let thumbEl = fourSynonyms[i-1];
+            element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
+            
+            // currentTile.style.background = thumbEl
+            // currentTile.style.color = "white"
+            // currentTile.setAttribute("id", thumbEl)
+        }
+        
+
+    
+    // for(let i =1; i < 5; i++){
+        
+    //     let element = document.getElementById("word" + i);
+    //     element.innerText = fourSynonyms[i-1] || "";
+    //     let thumbEl = fourSynonyms[i-1];
+    //     element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
+        
+    //     currentTile.style.background = thumbEl
+    //     currentTile.style.color = "white"
+    //     currentTile.setAttribute("id", thumbEl)
+    // }
+
+    
+
+//    let savedSearches = localStorage.getItem("savedSynonyms");
+// 	if (!savedSearches){
+//         savedSearches = [];
+// }   else{
+//     // console.log(savedSearches);
+//     // console.log(typeof savedSearches);
+//     savedSearches = JSON.parse(savedSearches)
+
+function synonymFavorites(e){
+    // if they click on something other than the thumbtack:
+    if (e.target.tagName !== "I") {
+        return null
     }
-	
+    // pulls ID off of thumbtack that is created on line 97
+    const id = e.target.id
+    const clickedFavorite = document.getElementById(id)
+    synArray = [];
+    // gets any previous favorites out of local storage
+    const prevFavoriteSyn = JSON.parse(localStorage.getItem("savedSynonyms"))
+    console.log(prevFavoriteSyn)
+    // loops over previous favorites and pushes them into favorites array
+    prevFavoriteSyn?.forEach((item) => {
+        synArray.push(item)
+    })
+    // checks to see if the favorite is already in local storage (? is a null check operator in case previous favorites is null or undefined)
+    const favorited = prevFavoriteSyn?.find((item) => item === id)
+    // if it has been favorited, this applies styling to indicate its no longer favorited/removes from array/stores new array in local storage
+    if (favorited) {
+        clickedFavorite.setAttribute("style", "color: white; margin-right: 1rem;")
+        synArray = synArray.filter((item) => item !== id)
+        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
+    // if not favorited does the oposite of previous if statement
+    } else if (!favorited) {
+        clickedFavorite.setAttribute("style", "color: black; margin-right: 1rem;")
+        synArray.push(id)
+        localStorage.setItem("savedSynonyms", JSON.stringify(synArray))
+    }
+    // calls function to add any favorites to the color dropdown
+    handleFavoriteWord()
+}
+
+function handleFavoriteWord () {
+    // empties out favorites array
+    synArray = []
+    // gets everything out of local storage & pushes back in
+    const prevFavorites = JSON.parse(localStorage.getItem("savedSynonyms"))
+    console.log(prevFavorites)
+    prevFavorites?.forEach((item) => {
+        synArray.push(item)
+        console.log(synArray)
+    })
+    // empties out saved colors
+    savedWordsEl.innerHTML = ""
+    // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
+    console.log(synArray)
+    synArray.forEach((item) => {
+        const icon = document.getElementById(`${item}`)
+        if (icon) {
+            icon.setAttribute("style", "color: black; margin-right: 1rem;")
+        }
+        // creates the color drop down cells and ads them to the saved colors dropdown div
+        const cell = document.createElement("div")
+
+        const hex = item.split("")
+        cell.setAttribute("style", `background: ${hex}; color: black;`)
+        cell.innerText = hex
+        savedWordsEl.append(cell)
+    })
+}
+
+
+
+
+
+
 	})
+    
+
+
 }
 	
 
@@ -285,6 +391,7 @@ function hideResults(){
 }
 function hideLanding(){
     handleFavoriteColorDD()
+    
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "none";
     let inputArea = document.getElementById("inputArea");
@@ -360,6 +467,8 @@ wordSubmitBtnEl.addEventListener("click", renderSynonyms);
 startBtnEl.addEventListener("click", hideLanding);
 startOverBtnEl.addEventListener('click', hideResults);
 contentGrid.addEventListener("click", (e) => handleFavorites(e))
+contentGrid.addEventListener("click", (e) => synonymFavorites(e));
+
 
 // this will need to be moved to the end of the word input
 handleColorPicker();
