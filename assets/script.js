@@ -28,7 +28,7 @@ function handleFavoriteWord(){
         synArray.push(item)
         console.log(synArray)
     })
-    // empties out saved colors
+    // empties out saved words
     savedWordsEl.innerHTML = ""
     // loops over array to see if ids in array are found on the content grid & sets their styling to indicatate if they have been favorited
     console.log(synArray)
@@ -37,7 +37,7 @@ function handleFavoriteWord(){
         if (icon) {
             icon.setAttribute("style", "color: black; margin-right: 1rem;")
         }
-        // creates the color drop down cells and ads them to the saved colors dropdown div
+        // creates the color drop down cells and ads them to the saved words dropdown div
         const cell = document.createElement("div")
 
         const hex = item.split("-")[1]
@@ -51,7 +51,7 @@ function wordFavorite(e){
      if (e.target.tagName !== "I") {
         return null
     }
-    // pulls ID off of thumbtack that is created on line 97
+    // pulls ID off of thumbtack 
     const id = e.target.id
     const clickedFavorite = document.getElementById(id)
     synArray = [];
@@ -265,7 +265,9 @@ var span = document.getElementsByClassName("close")[0];
             
             //displayWord.innerText = wordValueEl;
             let searchedWord = document.getElementById('searchedWord');
-            searchedWord.innerText = wordValueEl;
+            searchedWord.innerHTML = `<i id="icon-${wordValueEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i> ${wordValueEl}`;
+
+
             
             
             synonymArray = [];
@@ -274,78 +276,59 @@ var span = document.getElementsByClassName("close")[0];
               
                 synonymArray.push(data.synonyms[i]);
             }
-            // if(synonymArray < 4){
-                //     fourSynonyms.push(synonymArray)
-                // }
+            
                 console.log(synonymArray)
                 let fourSynonyms = [];
                 for (let i = 0; i < 4; i++){
                   
-                    if(synonymArray[i] !== undefined){
-                        
-                        var randomWord = synonymArray[Math.floor(Math.random() * synonymArray.length)];
-                        
-                        if(!fourSynonyms.includes(randomWord)){
+                    
+                        var randomIndex = Math.floor(Math.random() * synonymArray.length)
+                        var randomWord = synonymArray[randomIndex];
+                        synonymArray.splice(randomIndex,1);
+                     
                             
                             fourSynonyms.push(randomWord);
                             
-                        }
                       
-                    }}
+                      
+                }
                     
+                    console.log(fourSynonyms);
                     // first call a for loop using math.floor(math.random () * array.length)
                     // use an if statement to check for duplicates  
         // push elements into new array
 
-        //console.log(fourSynonyms);
     
-  //  console.log(fourSynonyms);
-    
-
-    
-        // searchedWord.innerHTML=""
-        
-        // searchedWord.innerText = wordValueEl;
-        // searchedWord.innerHTML = `<div id="parent-${searchedWord}" style="display:flex; align-items:center;"> <i id="icon-${searchedWord}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${searchedWord}</div>`
         for(let i =1; i < 5; i++){
-        
+            console.log(i)
             let element = document.getElementById("word" + i);
             element.innerText = fourSynonyms[i-1] || "";
             let thumbEl = fourSynonyms[i-1];
-            element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
             element.style.color = "white"
-            element.style.backgroundColor = "#d9d9d9"
-            element.style.textShadow = "#ABABAB 2px 2px 2px;"
-            // currentTile.style.background = thumbEl
-            // currentTile.style.color = "white"
-            // currentTile.setAttribute("id", thumbEl)
+           // element.style.backgroundColor = "#d9d9d9"
+           // element.style.textShadow = "#ABABAB 2px 2px 2px;"
+           // element.style.borderRadius = "16px"
+           // element.style.minHeight = "7rem"
+            //element.style = "text-shadow: #ABABAB 2px 2px 2px";
+  
+            //element.style = " border-radius: 16px";
+ 
+            //element.style = " min-height: 7rem";
+            if(thumbEl){
+                element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
+
+            } else {
+                element.innerHTML = `<div style="display:flex; align-items:center;"> </div>`
+
+            }
+
+            
         }
     })
         
 
     
-    // for(let i =1; i < 5; i++){
-        
-    //     let element = document.getElementById("word" + i);
-    //     element.innerText = fourSynonyms[i-1] || "";
-    //     let thumbEl = fourSynonyms[i-1];
-    //     element.innerHTML = `<div id="parent-${thumbEl}" style="display:flex; align-items:center;"> <i id="icon-${thumbEl}" class="fa fa-thumbtack favorite-icon" style="color:white; margin-right: 1rem;"></i>${thumbEl}</div>`
-        
-    //     currentTile.style.background = thumbEl
-    //     currentTile.style.color = "white"
-    //     currentTile.setAttribute("id", thumbEl)
-    // }
-
-    
-
-//    let savedSearches = localStorage.getItem("savedSynonyms");
-// 	if (!savedSearches){
-//         savedSearches = [];
-// }   else{
-//     // console.log(savedSearches);
-//     // console.log(typeof savedSearches);
-//     savedSearches = JSON.parse(savedSearches)
-
+   
 
 
 
