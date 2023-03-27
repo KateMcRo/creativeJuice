@@ -16,11 +16,6 @@ body {
   background-color: var(--daylight);
 }
 
-header {
-  width: 100%;
-  text-align: inherit;
-}
-
 /* navigation bar */
 .navbar {
   background: linear-gradient(#8a8a8a, #cccccc);
