@@ -193,6 +193,7 @@ function hideResults(){
 
 function hideLanding(){
     handleFavoriteColorDD()
+    handleFavoriteWord()
     let landingContainer = document.getElementById("landingContainer");
     landingContainer.style.display = "none";
     let inputArea = document.getElementById("inputArea");
