@@ -160,7 +160,7 @@ function renderSynonyms(){
                     var randomIndex = Math.floor(Math.random() * synonymArray.length)
                     var randomWord = synonymArray[randomIndex];
                     synonymArray.splice(randomIndex,1);
-                        fourSynonyms.push(randomWord);       
+                    fourSynonyms.push(randomWord);       
             }
                 // first call a for loop using math.floor(math.random () * array.length), use an if statement to check for duplicates, push elements into new array
 
