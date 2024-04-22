@@ -32,6 +32,8 @@ Click on the thumbtack icon to save or remove an option to favorites dropdown. T
 
 [Live Deployed Creative Juice](https://katemcro.github.io/creativeJuice/)
 
+[Brand and Design Concepts on Figma](https://www.figma.com/file/h21kBi2UaxUUIBCxNTgcqB/Creative-Juice?type=design&node-id=0%3A1&mode=design&t=fwYi44VOa1kgtjU7-1)
+
 ## Credits
 
 - [John Elmore](https://github.com/Letmego1st) 
